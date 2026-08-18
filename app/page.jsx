@@ -6,6 +6,8 @@ import {
   Braces,
   Check,
   Code2,
+  Film,
+  Image,
   Layers3,
   Mail,
   Menu,
@@ -16,7 +18,6 @@ import {
   X,
   Zap,
 } from 'lucide-react';
-
 const projects = [
   {
     title: 'Monblan Project',
@@ -48,6 +49,45 @@ const projects = [
   },
 ];
 
+const designCases = [
+  {
+    title: 'Print & Product Design',
+    type: 'Друк / продукція',
+    image: 'images/design-print.svg',
+    description: 'Макети для друку, плотерної порізки та нанесення на продукцію: одяг, чашки, таблички, оракал, стенди.',
+    stack: ['Illustrator', 'Photoshop', 'CMYK', 'Prepress'],
+  },
+  {
+    title: 'Digital Creatives',
+    type: 'Банери / соцмережі',
+    image: 'images/design-digital.svg',
+    description: 'SMM-креативи, web-банери, рекламні матеріали, презентаційні макети й графіка для сайтів.',
+    stack: ['Figma', 'Photoshop', 'AI tools', 'Digital'],
+  },
+  {
+    title: 'Motion & 3D',
+    type: 'Анімація / Blender',
+    image: 'images/design-motion.svg',
+    description: 'Блок під Blender-рендери, 3D-візуалізації, короткі motion-ролики та анімовані креативи з After Effects.',
+    stack: ['Blender', 'After Effects', 'Premiere Pro'],
+  },
+];
+
+const toolGroups = [
+  {
+    title: 'Frontend',
+    tools: ['HTML5', 'CSS3', 'SCSS', 'BEM', 'JavaScript', 'jQuery', 'Vite', 'Gulp', 'Git'],
+  },
+  {
+    title: 'Design',
+    tools: ['Illustrator', 'Photoshop', 'Figma', 'CorelDRAW', 'After Effects', 'Premiere Pro', 'Blender'],
+  },
+  {
+    title: 'Workflow',
+    tools: ['GitHub Pages', 'WordPress', 'ChatGPT', 'Claude', 'AI images'],
+  },
+];
+
 const skills = [
   'Семантичний HTML',
   'Адаптивна CSS-верстка',
@@ -56,18 +96,21 @@ const skills = [
   'Gulp',
   'SCSS',
   'jQuery',
+  'Adobe Illustrator',
+  'Adobe Photoshop',
+  'Figma',
+  'Blender',
+  'After Effects',
   'DOM-інтеракції',
-  'Анімації та transitions',
-  'Оптимізація Lighthouse',
-  'Доступність WCAG',
-  'Pixel-perfect верстка',
+  'GitHub Pages',
+  'Підготовка до друку',
 ];
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
-  const sections = useMemo(() => ['hero', 'services', 'work', 'contact'], []);
+  const sections = useMemo(() => ['hero', 'services', 'work', 'design', 'tools', 'contact'], []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -90,6 +133,8 @@ export default function Page() {
     ['hero', 'Головна'],
     ['services', 'Послуги'],
     ['work', 'Роботи'],
+    ['design', 'Дизайн'],
+    ['tools', 'Інструменти'],
     ['contact', 'Контакти'],
   ];
 
@@ -98,7 +143,7 @@ export default function Page() {
       <header className="site-header">
         <a className="brand" href="#hero" aria-label="На головну">
           <span className="brand-mark"><Code2 size={18} /></span>
-          <span>Dev Portfolio</span>
+          <span>Vadym Loiko</span>
         </a>
         <nav className={menuOpen ? 'nav nav-open' : 'nav'} aria-label="Основна навігація">
           {navItems.map(([id, label]) => (
@@ -135,8 +180,8 @@ export default function Page() {
                 alt="Портрет HTML CSS JS розробника"
               />
               <figcaption>
-                <strong>Frontend Developer</strong>
-                <span>HTML / CSS / JavaScript</span>
+                <strong>Markup Developer</strong>
+                <span>HTML / CSS / JS + design</span>
               </figcaption>
             </figure>
             <div className="code-window">
@@ -147,34 +192,35 @@ export default function Page() {
               </div>
               <pre>{`const developer = {
   craft: ['HTML', 'CSS', 'JS'],
-  focus: 'clean interfaces',
-  ships: 'fast, responsive sites'
+  design: ['print', 'digital', '3D'],
+  goal: 'make it work and look right'
 };`}</pre>
             </div>
-            <div className="floating-chip chip-one"><Zap size={16} /> 98 Lighthouse</div>
-            <div className="floating-chip chip-two"><Sparkles size={16} /> Micro-interactions</div>
+            <div className="floating-chip chip-one"><Zap size={16} /> HTML / SCSS / JS</div>
+            <div className="floating-chip chip-two"><Sparkles size={16} /> Print + Digital</div>
           </div>
           <div className="hero-content">
-            <p className="eyebrow"><Braces size={16} /> HTML CSS JS розробник</p>
-            <h1>Створюю швидкі, адаптивні та виразні веб-інтерфейси</h1>
+            <p className="eyebrow"><Braces size={16} /> HTML CSS JS / Graphic Design</p>
+            <h1>Верстаю адаптивні сайти на HTML, CSS і JavaScript</h1>
             <p className="hero-copy">
-              Верстаю сучасні сайти й невеликі веб-додатки з уважністю до деталей,
-              продуктивності, доступності та реальних бізнес-задач.
+              Перетворюю макети на живі сторінки: чиста структура, акуратні стилі,
+              responsive-поведінка і прості JS-інтеракції без зайвого шуму.
+              Паралельно працюю з графікою для друку, web-банерами, 3D і motion.
             </p>
             <div className="hero-actions">
               <a className="primary-button" href="#work">
-                Переглянути роботи
+                Web-кейси
                 <ArrowUpRight size={18} />
               </a>
-              <a className="secondary-button" href="#contact">Обговорити проєкт</a>
+              <a className="secondary-button" href="#design">Дизайн-портфоліо</a>
             </div>
           </div>
         </section>
 
         <section className="metrics" aria-label="Ключові показники">
-          <div><strong>24+</strong><span>готових сторінок</span></div>
-          <div><strong>3 роки</strong><span>комерційного досвіду</span></div>
-          <div><strong>100%</strong><span>responsive first</span></div>
+          <div><strong>2022</strong><span>верстка в команді inWeb</span></div>
+          <div><strong>2019</strong><span>дизайн і друк у FOXART</span></div>
+          <div><strong>2 напрями</strong><span>frontend + graphic design</span></div>
         </section>
 
         <section className="section" id="services">
@@ -186,17 +232,17 @@ export default function Page() {
             <article>
               <MonitorSmartphone size={26} />
               <h3>Адаптивна верстка</h3>
-              <p>Сторінки однаково впевнено виглядають на мобільних, планшетах і десктопах.</p>
+              <p>Верстаю сторінки по Figma-макетах: desktop, tablet, mobile, hover/focus-стани й нормальна структура файлів.</p>
             </article>
             <article>
               <Palette size={26} />
-              <h3>UI деталізація</h3>
-              <p>Працюю з відступами, типографікою, hover-станами, формами та точністю до макета.</p>
+              <h3>Дизайн для web і друку</h3>
+              <p>Готую банери, поліграфію, брендовану продукцію, web-графіку та файли для друку або нанесення.</p>
             </article>
             <article>
               <Rocket size={26} />
-              <h3>Інтерактивність</h3>
-              <p>Додаю меню, фільтри, модальні вікна, таби, слайдери та легкі сценарії на JavaScript.</p>
+              <h3>Рух і 3D</h3>
+              <p>Додаю до портфоліо motion-креативи, прості відео, Blender-рендери й 3D-візуалізації.</p>
             </article>
           </div>
         </section>
@@ -204,7 +250,7 @@ export default function Page() {
         <section className="section work-section" id="work">
           <div className="section-heading">
             <p className="eyebrow"><Sparkles size={16} /> Кейси</p>
-            <h2>Проєкти з акцентом на швидкість і якість</h2>
+            <h2>Web-проєкти, які вже можна відкрити</h2>
           </div>
           <div className="project-grid">
             {projects.map(project => (
@@ -238,6 +284,49 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="section design-section" id="design">
+          <div className="section-heading">
+            <p className="eyebrow"><Palette size={16} /> Graphic & Digital Design</p>
+            <h2>Окремий блок під дизайн, друк, банери, 3D і motion</h2>
+          </div>
+          <div className="design-grid">
+            {designCases.map(item => (
+              <article className="design-card" key={item.title}>
+                <img className="design-image" src={item.image} alt={`Прев'ю напряму ${item.title}`} />
+                <div className="design-content">
+                  <span>{item.type}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div className="tag-row">
+                    {item.stack.map(tag => <small key={tag}>{tag}</small>)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section tools-section" id="tools">
+          <div className="section-heading">
+            <p className="eyebrow"><Image size={16} /> Інструменти</p>
+            <h2>Програми й стек, з якими працюю</h2>
+          </div>
+          <div className="tools-grid">
+            {toolGroups.map(group => (
+              <article className="tool-group" key={group.title}>
+                <h3>{group.title}</h3>
+                <div className="tool-badges">
+                  {group.tools.map(tool => <span key={tool}>{tool}</span>)}
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="motion-note">
+            <Film size={22} />
+            <p>Motion reel, GIF-прев'ю або короткі відео з Blender / After Effects добре доповнять цей блок.</p>
+          </div>
+        </section>
+
         <section className="skills-band" aria-label="Технології">
           <div className="skills-track">
             {[...skills, ...skills].map((skill, index) => (
@@ -249,15 +338,15 @@ export default function Page() {
         <section className="contact-section" id="contact">
           <div>
             <p className="eyebrow"><Mail size={16} /> Контакти</p>
-            <h2>Є макет або ідея? Давайте зробимо її живою.</h2>
+            <h2>Є макет, дизайн-задача або сайт, який треба доробити?</h2>
             <p>
-              Напишіть коротко про задачу, дедлайн і бажаний формат співпраці.
-              Я відповім із питаннями, оцінкою та наступними кроками.
+              Напишіть коротко, що потрібно зробити: верстка, правки, банери,
+              підготовка до друку, 3D або motion. Далі швидко розберемо задачу по суті.
             </p>
           </div>
           <div className="contact-panel">
-            <a href="mailto:hello@example.com"><Mail size={20} /> hello@example.com</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer"><Code2 size={20} /> GitHub</a>
+            <a href="mailto:vaddimmura@gmail.com"><Mail size={20} /> vaddimmura@gmail.com</a>
+            <a href="https://github.com/Mr-Vadym" target="_blank" rel="noreferrer"><Code2 size={20} /> GitHub</a>
             <a href="#hero"><ArrowUpRight size={20} /> Повернутися нагору</a>
           </div>
         </section>
@@ -265,3 +354,4 @@ export default function Page() {
     </>
   );
 }
+

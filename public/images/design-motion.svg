@@ -1,0 +1,20 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#101510"/>
+  <rect x="94" y="82" width="1012" height="586" fill="#151a20" stroke="#2d3746" stroke-width="2"/>
+  <rect x="150" y="138" width="610" height="344" fill="#0b0f16"/>
+  <circle cx="456" cy="310" r="112" fill="#58e6ff"/>
+  <path d="M456 174l118 68v136l-118 68-118-68V242l118-68Z" fill="#9af266" fill-opacity=".82"/>
+  <path d="M456 174v136l118-68-118-68Z" fill="#ffffff" fill-opacity=".45"/>
+  <rect x="810" y="138" width="240" height="344" fill="#f5f7fb"/>
+  <rect x="842" y="178" width="176" height="16" fill="#101510"/>
+  <rect x="842" y="220" width="132" height="12" fill="#9aa7b5"/>
+  <rect x="842" y="250" width="148" height="12" fill="#9aa7b5"/>
+  <rect x="842" y="312" width="64" height="64" fill="#ffc857"/>
+  <rect x="926" y="312" width="64" height="64" fill="#ff6b9d"/>
+  <rect x="150" y="530" width="900" height="56" fill="#0b0f16"/>
+  <rect x="192" y="548" width="118" height="20" fill="#58e6ff"/>
+  <rect x="336" y="548" width="178" height="20" fill="#9af266"/>
+  <rect x="540" y="548" width="96" height="20" fill="#ffc857"/>
+  <rect x="662" y="548" width="236" height="20" fill="#ff6b9d"/>
+  <text x="600" y="631" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff">Blender renders, motion and video placeholders</text>
+</svg>
