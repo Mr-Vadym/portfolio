@@ -16,25 +16,26 @@ import {
   X,
   Zap,
 } from 'lucide-react';
+
 const projects = [
   {
     title: 'Studio Landing',
     type: 'Комерційний сайт',
-    image: '/images/project-studio.svg',
+    image: 'images/project-studio.svg',
     description: 'Швидкий промо-сайт для digital studio з адаптивною сіткою, мікроанімаціями та формою заявки.',
     stack: ['HTML', 'CSS Grid', 'JavaScript'],
   },
   {
     title: 'Shop UI Kit',
     type: 'Інтерфейс магазину',
-    image: '/images/project-shop.svg',
+    image: 'images/project-shop.svg',
     description: 'Каталог, картки товарів, фільтри та кошик з чистою логікою на JS без зайвих залежностей.',
     stack: ['Flexbox', 'DOM API', 'LocalStorage'],
   },
   {
     title: 'Dashboard Lite',
     type: 'Веб-додаток',
-    image: '/images/project-dashboard.svg',
+    image: 'images/project-dashboard.svg',
     description: 'Адмін-панель для малого бізнесу з табами, графічними віджетами та продуманими станами UI.',
     stack: ['CSS Variables', 'Modules', 'Charts'],
   },
@@ -119,7 +120,7 @@ export default function Page() {
           <div className="hero-media">
             <figure className="portrait-card">
               <img
-                src="/images/profile-placeholder.png"
+                src="images/profile-placeholder.png"
                 alt="Портрет HTML CSS JS розробника"
               />
               <figcaption>

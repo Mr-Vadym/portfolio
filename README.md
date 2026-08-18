@@ -33,6 +33,22 @@ npm run dev
 npm run build
 ```
 
+## GitHub Pages
+
+The repository includes a GitHub Actions workflow that builds a static export for GitHub Pages.
+
+Expected Pages URL:
+
+```text
+https://mr-vadym.github.io/portfolio/
+```
+
+Local Pages build:
+
+```bash
+npm run build:pages
+```
+
 ## Images
 
 Replace the placeholder assets in `public/images/` with your own portrait and project screenshots.
