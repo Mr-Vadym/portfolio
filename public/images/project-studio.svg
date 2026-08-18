@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Studio landing page screenshot placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101720"/>
+      <stop offset="0.58" stop-color="#172533"/>
+      <stop offset="1" stop-color="#1f1022"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#58e6ff"/>
+      <stop offset="1" stop-color="#9af266"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect x="70" y="62" width="1060" height="636" rx="22" fill="#0b1018" stroke="#ffffff" stroke-opacity=".13"/>
+  <rect x="110" y="104" width="140" height="18" rx="9" fill="#f5f7fb" opacity=".88"/>
+  <rect x="850" y="102" width="88" height="16" rx="8" fill="#a7b0bf" opacity=".65"/>
+  <rect x="962" y="102" width="88" height="16" rx="8" fill="#a7b0bf" opacity=".45"/>
+  <rect x="1074" y="92" width="44" height="36" rx="18" fill="url(#accent)"/>
+  <rect x="110" y="216" width="360" height="26" rx="13" fill="#58e6ff"/>
+  <rect x="110" y="266" width="500" height="64" rx="12" fill="#f5f7fb" opacity=".95"/>
+  <rect x="110" y="350" width="430" height="22" rx="11" fill="#a7b0bf" opacity=".7"/>
+  <rect x="110" y="388" width="370" height="22" rx="11" fill="#a7b0bf" opacity=".45"/>
+  <rect x="110" y="470" width="170" height="54" rx="27" fill="#9af266"/>
+  <rect x="306" y="470" width="170" height="54" rx="27" fill="#ffffff" opacity=".08" stroke="#ffffff" stroke-opacity=".16"/>
+  <rect x="690" y="182" width="354" height="386" rx="28" fill="#17202d"/>
+  <circle cx="806" cy="316" r="88" fill="#ff6b9d" opacity=".88"/>
+  <path d="M726 500c52-106 144-151 276-134v134H726z" fill="url(#accent)" opacity=".9"/>
+  <rect x="736" y="600" width="250" height="20" rx="10" fill="#a7b0bf" opacity=".55"/>
+</svg>
