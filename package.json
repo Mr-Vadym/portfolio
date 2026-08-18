@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "vinext dev --hostname 127.0.0.1",
     "build": "vinext build && node scripts/prepare-sites-build.mjs",
+    "build:pages": "vite build --base /portfolio/ --outDir dist-pages",
     "start": "vinext start --hostname 127.0.0.1"
   },
   "dependencies": {
