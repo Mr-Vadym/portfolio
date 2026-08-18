@@ -287,7 +287,7 @@ export default function Page() {
         <section className="section design-section" id="design">
           <div className="section-heading">
             <p className="eyebrow"><Palette size={16} /> Graphic & Digital Design</p>
-            <h2>Окремий блок під дизайн, друк, банери, 3D і motion</h2>
+            <h2>Графічний дизайн, digital-креативи та 3D</h2>
           </div>
           <div className="design-grid">
             {designCases.map(item => (
