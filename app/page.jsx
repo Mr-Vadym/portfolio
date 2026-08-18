@@ -51,25 +51,25 @@ const projects = [
 
 const designCases = [
   {
-    title: 'Print & Product Design',
-    type: 'Друк / продукція',
-    image: 'images/design-print.svg',
-    description: 'Макети для друку, плотерної порізки та нанесення на продукцію: одяг, чашки, таблички, оракал, стенди.',
-    stack: ['Illustrator', 'Photoshop', 'CMYK', 'Prepress'],
+    title: 'FOXART brochure',
+    type: 'Поліграфія / презентаційний макет',
+    image: 'images/case-brochure.jpg',
+    description: 'Буклет для натяжних стель: структура сторінок, підбір візуалів, палітра матеріалів і підготовка макета до друку.',
+    stack: ['Illustrator', 'Photoshop', 'Print', 'PDF'],
   },
   {
-    title: 'Digital Creatives',
-    type: 'Банери / соцмережі',
-    image: 'images/design-digital.svg',
-    description: 'SMM-креативи, web-банери, рекламні матеріали, презентаційні макети й графіка для сайтів.',
-    stack: ['Figma', 'Photoshop', 'AI tools', 'Digital'],
+    title: 'Nails price design',
+    type: 'Digital / прайс / візуальна айдентика',
+    image: 'images/case-nails.jpg',
+    description: 'Прайс для nail-майстра з виразною кольоровою подачею, великими заголовками й місцем під контакти та QR-код.',
+    stack: ['Photoshop', 'Typography', 'Social', 'Brand'],
   },
   {
-    title: 'Motion & 3D',
-    type: 'Анімація / Blender',
-    image: 'images/design-motion.svg',
-    description: 'Блок під Blender-рендери, 3D-візуалізації, короткі motion-ролики та анімовані креативи з After Effects.',
-    stack: ['Blender', 'After Effects', 'Premiere Pro'],
+    title: 'Curtain rail render',
+    type: '3D / product visual',
+    image: 'images/case-3d-render.jpg',
+    description: '3D-візуалізація конструкції для пояснення форми, розмірів і варіантів виконання продукту.',
+    stack: ['Blender', '3D render', 'Product', 'Motion'],
   },
 ];
 
