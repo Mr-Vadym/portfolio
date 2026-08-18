@@ -19,25 +19,32 @@ import {
 
 const projects = [
   {
-    title: 'Studio Landing',
-    type: 'Комерційний сайт',
-    image: 'images/project-studio.svg',
-    description: 'Швидкий промо-сайт для digital studio з адаптивною сіткою, мікроанімаціями та формою заявки.',
-    stack: ['HTML', 'CSS Grid', 'JavaScript'],
+    title: 'Monblan Project',
+    type: 'Profile feed interface',
+    image: 'images/project-webspark.svg',
+    description: 'Адаптивна сторінка профілю з feed-картками, фільтром дат, перемиканням grid/list і production-збіркою на Vite.',
+    stack: ['Vite', 'SCSS', 'JavaScript', 'Flatpickr'],
+    highlights: [
+      'семантична HTML-структура та responsive layout',
+      'динамічний рендер постів з окремого data-модуля',
+      'кастомізований datepicker і перемикач вигляду стрічки',
+    ],
+    demoUrl: 'https://mr-vadym.github.io/webspark-test/',
+    repoUrl: 'https://github.com/Mr-Vadym/webspark-test',
   },
   {
-    title: 'Shop UI Kit',
-    type: 'Інтерфейс магазину',
-    image: 'images/project-shop.svg',
-    description: 'Каталог, картки товарів, фільтри та кошик з чистою логікою на JS без зайвих залежностей.',
-    stack: ['Flexbox', 'DOM API', 'LocalStorage'],
-  },
-  {
-    title: 'Dashboard Lite',
-    type: 'Веб-додаток',
-    image: 'images/project-dashboard.svg',
-    description: 'Адмін-панель для малого бізнесу з табами, графічними віджетами та продуманими станами UI.',
-    stack: ['CSS Variables', 'Modules', 'Charts'],
+    title: 'Inweb Media Layout',
+    type: 'Multi-page blog layout',
+    image: 'images/project-inweb.svg',
+    description: 'Багатосторінкова верстка медіа/блогу з головною, категоріями, сторінкою статті, автором, пошуком і мобільним меню.',
+    stack: ['Gulp', 'SCSS', 'jQuery', 'Slick slider'],
+    highlights: [
+      'модульні HTML-include шаблони для повторюваних блоків',
+      'адаптивний header, sidebar, search overlay і навігація',
+      'збірка з оптимізацією стилів, скриптів, шрифтів і зображень',
+    ],
+    demoUrl: 'https://mr-vadym.github.io/inweb/',
+    repoUrl: 'https://github.com/Mr-Vadym/inweb',
   },
 ];
 
@@ -45,6 +52,10 @@ const skills = [
   'Семантичний HTML',
   'Адаптивна CSS-верстка',
   'JavaScript ES6+',
+  'Vite',
+  'Gulp',
+  'SCSS',
+  'jQuery',
   'DOM-інтеракції',
   'Анімації та transitions',
   'Оптимізація Lighthouse',
@@ -203,8 +214,23 @@ export default function Page() {
                   <span>{project.type}</span>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  <ul className="project-points">
+                    {project.highlights.map(item => (
+                      <li key={item}><Check size={15} /> {item}</li>
+                    ))}
+                  </ul>
                   <div className="tag-row">
                     {project.stack.map(tag => <small key={tag}>{tag}</small>)}
+                  </div>
+                  <div className="project-actions">
+                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                      Демо
+                      <ArrowUpRight size={17} />
+                    </a>
+                    <a href={project.repoUrl} target="_blank" rel="noreferrer">
+                      Код
+                      <Code2 size={17} />
+                    </a>
                   </div>
                 </div>
               </article>

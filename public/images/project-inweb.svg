@@ -1,0 +1,41 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#f2f5f8"/>
+  <rect x="72" y="64" width="1056" height="622" fill="#ffffff" stroke="#d7dfe7" stroke-width="2"/>
+  <rect x="72" y="64" width="1056" height="96" fill="#0b0f16"/>
+  <text x="126" y="125" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900" fill="#ffffff">Inweb</text>
+  <rect x="294" y="101" width="84" height="16" fill="#ffffff" fill-opacity=".75"/>
+  <rect x="416" y="101" width="118" height="16" fill="#ffffff" fill-opacity=".75"/>
+  <rect x="572" y="101" width="82" height="16" fill="#ffffff" fill-opacity=".75"/>
+  <rect x="692" y="101" width="112" height="16" fill="#ffffff" fill-opacity=".75"/>
+  <rect x="948" y="91" width="110" height="36" fill="#9af266"/>
+  <rect x="120" y="216" width="598" height="266" fill="#111722"/>
+  <rect x="156" y="252" width="154" height="28" fill="#58e6ff"/>
+  <rect x="156" y="310" width="438" height="22" fill="#ffffff"/>
+  <rect x="156" y="348" width="388" height="22" fill="#ffffff"/>
+  <rect x="156" y="410" width="170" height="42" fill="#9af266"/>
+  <rect x="758" y="216" width="300" height="82" fill="#f5f7fb" stroke="#d7dfe7"/>
+  <rect x="786" y="241" width="178" height="14" fill="#111722"/>
+  <rect x="786" y="268" width="224" height="12" fill="#9aa7b5"/>
+  <rect x="758" y="326" width="300" height="82" fill="#f5f7fb" stroke="#d7dfe7"/>
+  <rect x="786" y="351" width="198" height="14" fill="#111722"/>
+  <rect x="786" y="378" width="206" height="12" fill="#9aa7b5"/>
+  <g transform="translate(120 532)">
+    <rect width="282" height="90" fill="#f5f7fb" stroke="#d7dfe7"/>
+    <rect x="24" y="23" width="82" height="44" fill="#ffc857"/>
+    <rect x="126" y="24" width="110" height="12" fill="#111722"/>
+    <rect x="126" y="48" width="130" height="10" fill="#9aa7b5"/>
+  </g>
+  <g transform="translate(438 532)">
+    <rect width="282" height="90" fill="#f5f7fb" stroke="#d7dfe7"/>
+    <rect x="24" y="23" width="82" height="44" fill="#ff6b9d"/>
+    <rect x="126" y="24" width="116" height="12" fill="#111722"/>
+    <rect x="126" y="48" width="130" height="10" fill="#9aa7b5"/>
+  </g>
+  <g transform="translate(756 532)">
+    <rect width="282" height="90" fill="#f5f7fb" stroke="#d7dfe7"/>
+    <rect x="24" y="23" width="82" height="44" fill="#58e6ff"/>
+    <rect x="126" y="24" width="128" height="12" fill="#111722"/>
+    <rect x="126" y="48" width="130" height="10" fill="#9aa7b5"/>
+  </g>
+  <text x="600" y="664" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#111722">Multi-page media layout</text>
+</svg>

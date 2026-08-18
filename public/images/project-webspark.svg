@@ -1,0 +1,34 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#eff4f8"/>
+  <rect x="78" y="72" width="1044" height="606" rx="0" fill="#ffffff" stroke="#d8e0e7" stroke-width="2"/>
+  <circle cx="215" cy="194" r="68" fill="#58e6ff"/>
+  <path d="M167 255c23-34 72-48 113-20 14 9 26 22 35 38H161c2-7 4-13 6-18Z" fill="#142033"/>
+  <rect x="337" y="141" width="266" height="34" fill="#111722"/>
+  <rect x="337" y="195" width="112" height="20" fill="#9aa7b5"/>
+  <rect x="484" y="195" width="92" height="20" fill="#9aa7b5"/>
+  <rect x="612" y="195" width="102" height="20" fill="#9aa7b5"/>
+  <rect x="337" y="252" width="138" height="42" fill="#f5f7fb" stroke="#cfd8e1"/>
+  <rect x="498" y="252" width="138" height="42" fill="#f5f7fb" stroke="#cfd8e1"/>
+  <rect x="940" y="266" width="42" height="42" fill="#111722"/>
+  <rect x="999" y="266" width="42" height="42" fill="#f5f7fb" stroke="#cfd8e1"/>
+  <g transform="translate(137 356)">
+    <rect width="230" height="190" fill="#b6e7f1"/>
+    <rect x="0" y="142" width="230" height="48" fill="#111722" fill-opacity=".88"/>
+    <circle cx="36" cy="166" r="10" fill="#ff6b9d"/>
+    <rect x="58" y="158" width="70" height="10" fill="#ffffff"/>
+  </g>
+  <g transform="translate(402 356)">
+    <rect width="230" height="190" fill="#f8d37e"/>
+    <rect x="0" y="142" width="230" height="48" fill="#111722" fill-opacity=".88"/>
+    <circle cx="36" cy="166" r="10" fill="#ff6b9d"/>
+    <rect x="58" y="158" width="70" height="10" fill="#ffffff"/>
+  </g>
+  <g transform="translate(667 356)">
+    <rect width="230" height="190" fill="#b9f28f"/>
+    <rect x="0" y="142" width="230" height="48" fill="#111722" fill-opacity=".88"/>
+    <circle cx="36" cy="166" r="10" fill="#ff6b9d"/>
+    <rect x="58" y="158" width="70" height="10" fill="#ffffff"/>
+  </g>
+  <rect x="502" y="594" width="196" height="48" fill="#111722"/>
+  <text x="600" y="625" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Monblan Project</text>
+</svg>
