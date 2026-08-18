@@ -1,38 +1,19 @@
 {
-  "name": "inweb",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^3.0.2",
-    "del": "^6.1.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-cache": "^1.1.3",
-    "gulp-cli": "^2.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^2.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-notify": "^4.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-svgmin": "^4.1.0",
-    "gulp-ttf2woff": "^1.1.1",
-    "gulp-ttf2woff2": "^4.0.1",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^4.0.1",
-    "reset-css": "^5.0.2",
-    "sass": "^1.72.0"
+    "dev": "vinext dev --hostname 127.0.0.1",
+    "build": "vinext build && node scripts/prepare-sites-build.mjs",
+    "start": "vinext start --hostname 127.0.0.1"
   },
   "dependencies": {
-    "jquery": "^3.7.1"
+    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-rsc": "^0.5.34",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-server-dom-webpack": "^19.2.8",
+    "typescript": "latest",
+    "vinext": "^1.0.0-beta.6",
+    "vite": "latest"
   }
 }

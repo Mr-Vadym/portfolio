@@ -1,27 +1,7 @@
-# Node.js
 node_modules/
-npm-debug.log
-yarn-error.log
-
-# Compiled files
-# dist/
-# *.min.js
-# *.min.css
-
-# Dependency directories
-bower_components/
-jspm_packages/
-
-# IDE files
-.vscode/
-.idea/
-
-# Gulp cache
-.gulp-cache/
-
-# Logs
-logs/
+dist/
+.vite/
+.next/
+.openai/
+.env*
 *.log
-
-# Gulp sourcemaps
-*.map
