@@ -655,12 +655,23 @@ h3 {
   }
 
   .floating-chip {
-    position: relative;
-    top: auto;
-    left: auto;
+    position: absolute;
+    left: 12px;
     right: auto;
     bottom: auto;
-    margin: 10px 0 0 12px;
+    margin: 0;
+  }
+
+  .chip-one {
+    top: 0;
+  }
+
+  .chip-two {
+    top: 56px;
+  }
+
+  .portrait-card {
+    top: 118px;
   }
 
   .metrics,
@@ -703,7 +714,7 @@ h3 {
   }
 
   .hero-media {
-    min-height: 520px;
+    min-height: 650px;
   }
 
   .portrait-card {
