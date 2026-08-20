@@ -335,7 +335,11 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="contact-section" id="contact">
+        <section
+          className="contact-section"
+          id="contact"
+          style={{ '--contact-bg-image': 'url("images/profile-bg-grain.jpg")' }}
+        >
           <div>
             <p className="eyebrow"><Mail size={16} /> Контакти</p>
             <h2>Є макет, дизайн-задача або сайт, який треба доробити?</h2>

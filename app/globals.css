@@ -572,10 +572,36 @@ h3 {
 }
 
 .contact-section {
+  position: relative;
+  z-index: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
   gap: clamp(28px, 6vw, 70px);
   align-items: center;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(9, 11, 15, 0.84), rgba(9, 11, 15, 0.96) 58%, rgba(9, 11, 15, 0.74)),
+    linear-gradient(180deg, rgba(9, 11, 15, 0.94), rgba(9, 11, 15, 0.5) 42%, rgba(9, 11, 15, 0.96)),
+    var(--contact-bg-image) left center / cover no-repeat;
+  opacity: 0.72;
+}
+
+.contact-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 76% 26%, rgba(47, 219, 255, 0.13), transparent 34%),
+    radial-gradient(circle at 20% 78%, rgba(255, 94, 138, 0.1), transparent 32%);
+  pointer-events: none;
 }
 
 .contact-panel {
