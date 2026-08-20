@@ -176,8 +176,8 @@ export default function Page() {
           <div className="hero-media">
             <figure className="portrait-card">
               <img
-                src="images/profile-placeholder.png"
-                alt="Портрет HTML CSS JS розробника"
+                src="images/profile-vadym.jpg"
+                alt="Фото Вадима Лойка"
               />
               <figcaption>
                 <strong>Markup Developer</strong>
