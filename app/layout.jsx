@@ -1,9 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'HTML CSS JS Developer Portfolio',
+  title: 'Vadym Loiko - Frontend Developer & Designer',
   description:
-    'Портфоліо HTML CSS JS розробника: сучасні інтерфейси, адаптивна верстка, анімації та чистий JavaScript.',
+    'Портфоліо Вадима Лойка: адаптивна HTML, CSS і JavaScript верстка, web-проєкти, графічний дизайн та 3D-візуалізації.',
 };
 
 export default function RootLayout({ children }) {
