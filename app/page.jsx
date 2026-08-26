@@ -63,6 +63,16 @@ const designCases = [
     image: 'images/case-football-logo.jpg',
     description: 'Емблема Slavuta Kids з тигром, футбольним мʼячем і щитовою формою для форми, прапорів, медалей та турнірної атрибутики.',
     stack: ['Illustrator', 'Logo', 'Vector', 'Brand'],
+    usage: [
+      {
+        image: 'images/case-football-logo-awards.jpg',
+        label: 'Нагородна атрибутика',
+      },
+      {
+        image: 'images/case-football-logo-team.png',
+        label: 'Прапор команди',
+      },
+    ],
   },
   {
     title: 'Сертифікат для lash-майстра',
@@ -310,6 +320,16 @@ export default function Page() {
                   <span>{item.type}</span>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
+                  {item.usage && (
+                    <div className="design-usage" aria-label={`Застосування ${item.title}`}>
+                      {item.usage.map(usage => (
+                        <figure key={usage.image}>
+                          <img src={usage.image} alt={`${usage.label}: ${item.title}`} />
+                          <figcaption>{usage.label}</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
                   <div className="tag-row">
                     {item.stack.map(tag => <small key={tag}>{tag}</small>)}
                   </div>
