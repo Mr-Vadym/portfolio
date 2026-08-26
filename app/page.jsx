@@ -171,7 +171,7 @@ export default function Page() {
             </a>
           ))}
         </nav>
-        <a className="header-cta" href="mailto:hello@example.com">
+        <a className="header-cta" href="mailto:vaddimmura@gmail.com">
           <Mail size={18} />
           <span>Написати</span>
         </a>
