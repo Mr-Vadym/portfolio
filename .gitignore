@@ -2,6 +2,7 @@ node_modules/
 dist/
 dist-pages/
 .vite/
+.vinext/
 .next/
 .openai/
 .env*

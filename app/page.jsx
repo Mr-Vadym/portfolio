@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Monblan Project',
     type: 'Profile feed interface',
-    image: 'images/project-webspark.svg',
+    image: 'images/project-monblan-screenshot.png',
     description: 'Адаптивна сторінка профілю з feed-картками, фільтром дат, перемиканням grid/list і production-збіркою на Vite.',
     stack: ['Vite', 'SCSS', 'JavaScript', 'Flatpickr'],
     highlights: [
@@ -36,7 +36,7 @@ const projects = [
   {
     title: 'Inweb Media Layout',
     type: 'Multi-page blog layout',
-    image: 'images/project-inweb.svg',
+    image: 'images/project-inweb-screenshot.png',
     description: 'Багатосторінкова верстка медіа/блогу з головною, категоріями, сторінкою статті, автором, пошуком і мобільним меню.',
     stack: ['Gulp', 'SCSS', 'jQuery', 'Slick slider'],
     highlights: [
@@ -51,25 +51,39 @@ const projects = [
 
 const designCases = [
   {
-    title: 'FOXART brochure',
-    type: 'Поліграфія / презентаційний макет',
-    image: 'images/case-brochure.jpg',
-    description: 'Буклет для натяжних стель: структура сторінок, підбір візуалів, палітра матеріалів і підготовка макета до друку.',
-    stack: ['Illustrator', 'Photoshop', 'Print', 'PDF'],
+    title: 'Календар подій',
+    type: 'Поліграфія / editorial layout',
+    image: 'images/case-events-calendar.png',
+    description: 'Преміальний календар подій ARTA Club: обкладинка, розвороти, темна палітра, типографіка і підготовка презентаційного макета.',
+    stack: ['Photoshop', 'Layout', 'Typography', 'Print'],
   },
   {
-    title: 'Nails price design',
-    type: 'Digital / прайс / візуальна айдентика',
-    image: 'images/case-nails.jpg',
-    description: 'Прайс для nail-майстра з виразною кольоровою подачею, великими заголовками й місцем під контакти та QR-код.',
-    stack: ['Photoshop', 'Typography', 'Social', 'Brand'],
+    title: 'Лого для футбольної команди',
+    type: 'Айдентика / sport branding',
+    image: 'images/case-football-logo.jpg',
+    description: 'Емблема Slavuta Kids з тигром, футбольним мʼячем і щитовою формою для форми, прапорів, медалей та турнірної атрибутики.',
+    stack: ['Illustrator', 'Logo', 'Vector', 'Brand'],
   },
   {
-    title: 'Curtain rail render',
-    type: '3D / product visual',
-    image: 'images/case-3d-render.jpg',
-    description: '3D-візуалізація конструкції для пояснення форми, розмірів і варіантів виконання продукту.',
-    stack: ['Blender', '3D render', 'Product', 'Motion'],
+    title: 'Сертифікат для lash-майстра',
+    type: 'Поліграфія / beauty voucher',
+    image: 'images/case-lashes-certificate.jpg',
+    description: 'Подарунковий сертифікат на нарощування вій у чорному та золотому стилі з полями для суми, дати й контактів.',
+    stack: ['Photoshop', 'Print', 'Typography', 'Social'],
+  },
+  {
+    title: 'Меню Ardente Pizza',
+    type: 'Меню / HoReCa design',
+    image: 'images/case-ardente-menu.jpg',
+    description: 'Дизайн ресторанного меню з категоріями страв, цінами, контактним блоком і яскравою літньою подачею для друку.',
+    stack: ['Photoshop', 'Menu', 'Print', 'Layout'],
+  },
+  {
+    title: 'Наліпка Meat Store',
+    type: 'Пакування / label design',
+    image: 'images/case-meat-store-sticker.png',
+    description: 'Кругла наліпка для мʼясного магазину з логотипом, дескриптором, Instagram-нікнеймом і телефоном.',
+    stack: ['Illustrator', 'Sticker', 'Logo', 'Print'],
   },
 ];
 

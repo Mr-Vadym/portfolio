@@ -401,9 +401,18 @@ h3 {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
   background: var(--panel-soft);
   border-bottom: 1px solid var(--line);
+}
+
+.project-image {
+  object-fit: contain;
+  background: #f5f7fb;
+}
+
+.design-image {
+  object-fit: contain;
+  background: #0f131b;
 }
 
 .project-content,
