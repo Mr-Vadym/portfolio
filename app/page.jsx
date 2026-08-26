@@ -232,8 +232,7 @@ export default function Page() {
         </section>
 
         <section className="metrics" aria-label="Ключові показники">
-          <div><strong>2022</strong><span>верстка в команді inWeb</span></div>
-          <div><strong>2019</strong><span>дизайн і друк у FOXART</span></div>
+          <div><strong>2022-2024</strong><span>верстка в команді inWeb</span></div>
           <div><strong>2 напрями</strong><span>frontend + graphic design</span></div>
         </section>
 
