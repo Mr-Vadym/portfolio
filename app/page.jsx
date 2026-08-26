@@ -255,7 +255,7 @@ export default function Page() {
             <article>
               <Rocket size={26} />
               <h3>Рух і 3D</h3>
-              <p>Додаю до портфоліо motion-креативи, прості відео, Blender-рендери й 3D-візуалізації.</p>
+              <p>Створюю motion-креативи, прості відео, Blender-рендери й 3D-візуалізації для web, презентацій і промоматеріалів.</p>
             </article>
           </div>
         </section>
