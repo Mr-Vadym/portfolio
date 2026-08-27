@@ -95,6 +95,13 @@ const designCases = [
     description: 'Кругла наліпка для мʼясного магазину з логотипом, дескриптором, Instagram-нікнеймом і телефоном.',
     stack: ['Illustrator', 'Sticker', 'Logo', 'Print'],
   },
+  {
+    title: 'Мокап коробки 1Power',
+    type: 'Пакування / product mockup',
+    image: 'images/case-box-branding-mockup.jpg',
+    description: 'Накладання дизайну на мокап коробки для кабелю: брендована графіка, патерн, бокова панель і товар у реалістичній подачі.',
+    stack: ['Photoshop', 'Mockup', 'Packaging', 'Product'],
+  },
 ];
 
 const toolGroups = [
