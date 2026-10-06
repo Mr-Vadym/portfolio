@@ -106,15 +106,15 @@ export default function Page() {
           <div className="featured-copy">
             <span>FEATURED CASE / 2026</span>
             <h3>Performance Ads<br />& E-commerce</h3>
-            <p>Commercial advertising creatives developed for fast-moving e-commerce campaigns: product layouts, offer mechanics, reviews, infographics and assets prepared for animation.</p>
+            <p>A self-initiated portfolio case demonstrating product layouts, offer mechanics, reviews, infographics, interactive concepts and format adaptation.</p>
             <div className="case-tags"><span>Photoshop</span><span>AI-assisted</span><span>Ad Creative</span><span>Production</span></div>
-            <button type="button">Case 01 — building now <ArrowUpRight size={18} /></button>
+            <button type="button">Case 01 — template ready <ArrowUpRight size={18} /></button>
           </div>
           <div className="featured-visual">
             <div className="visual-card visual-a">AD<br />01</div>
             <div className="visual-card visual-b">AD<br />02</div>
             <div className="visual-card visual-c">AD<br />03</div>
-            <span>Real campaign visuals will replace these placeholders</span>
+            <span>Replace with original fictional-brand portfolio visuals</span>
           </div>
         </div>
 
