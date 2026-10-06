@@ -70,7 +70,7 @@ export default function Page() {
       <section className="split-hero" id="home">
         <header className="split-header">
           <a href="#home" className="wordmark">VL<span>.</span></a>
-          <p>Vadym Loiko / Portfolio 2026</p>
+          <p>Vadym Loiko / Portfolio 2026 · Design + Code</p>
           <a href="mailto:vaddimmura@gmail.com"><Mail size={17} /> Contact</a>
         </header>
 
