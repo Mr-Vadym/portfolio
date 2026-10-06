@@ -1,401 +1,222 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import {
-  ArrowUpRight,
-  Braces,
-  Check,
-  Code2,
-  Film,
-  Image,
-  Layers3,
-  Mail,
-  Menu,
-  MonitorSmartphone,
-  Palette,
-  Rocket,
-  Sparkles,
-  X,
-  Zap,
-} from 'lucide-react';
-const projects = [
+import { useEffect, useState } from 'react';
+import { ArrowDown, ArrowUpRight, Code2, Mail, Palette, Sparkles } from 'lucide-react';
+
+const paths = {
+  design: {
+    kicker: '01 / DESIGN',
+    title: 'Creative\nDesigner',
+    copy: 'Performance ads, e-commerce, AI-assisted visuals, digital and print.',
+    meta: ['Photoshop', 'Illustrator', 'AI', 'Performance'],
+    icon: Palette,
+    target: '#design',
+  },
+  code: {
+    kicker: '02 / CODE',
+    title: 'Front-end\nMarkup',
+    copy: 'Responsive interfaces built from design to production-ready HTML, SCSS and JavaScript.',
+    meta: ['HTML', 'SCSS', 'JavaScript', 'Vite'],
+    icon: Code2,
+    target: '#code',
+  },
+};
+
+const designPreview = [
+  ['Performance Ads', 'E-commerce · advertising production', 'New case / 2026'],
+  ['Interactive Creatives', 'Quiz · scratch · spin mechanics', 'Coming next'],
+  ['Premium & Lifestyle', 'Editorial · product · brand visuals', 'Selected work'],
+];
+
+const caseSections = [
+  ['01', 'Campaign hero', 'Primary key visual / strongest first impression', '900 × 1350'],
+  ['02', 'Creative variations', 'Three connected ad directions from one campaign', '3 × 900 × 1350'],
+  ['03', 'Benefits & infographic', 'Product value translated into clear visual information', '2 × 900 × 1350'],
+  ['04', 'Social proof', 'Review-led creative with trust and product hierarchy', '900 × 1350'],
+  ['05', 'Interactive concept', 'Quiz, scratch, carousel or another interaction-first mechanic', '900 × 1350'],
+  ['06', 'Format adaptation', 'One selected concept rebuilt for landscape', '1350 × 900'],
+];
+
+const codeProjects = [
   {
     title: 'Monblan Project',
-    type: 'Profile feed interface',
+    type: 'Responsive profile interface',
     image: 'images/project-monblan-screenshot.png',
-    description: 'Адаптивна сторінка профілю з feed-картками, фільтром дат, перемиканням grid/list і production-збіркою на Vite.',
     stack: ['Vite', 'SCSS', 'JavaScript', 'Flatpickr'],
-    highlights: [
-      'семантична HTML-структура та responsive layout',
-      'динамічний рендер постів з окремого data-модуля',
-      'кастомізований datepicker і перемикач вигляду стрічки',
-    ],
-    demoUrl: 'https://mr-vadym.github.io/webspark-test/',
-    repoUrl: 'https://github.com/Mr-Vadym/webspark-test',
+    demo: 'https://mr-vadym.github.io/webspark-test/',
+    repo: 'https://github.com/Mr-Vadym/webspark-test',
   },
   {
     title: 'Inweb Media Layout',
     type: 'Multi-page blog layout',
     image: 'images/project-inweb-screenshot.png',
-    description: 'Багатосторінкова верстка медіа/блогу з головною, категоріями, сторінкою статті, автором, пошуком і мобільним меню.',
-    stack: ['Gulp', 'SCSS', 'jQuery', 'Slick slider'],
-    highlights: [
-      'модульні HTML-include шаблони для повторюваних блоків',
-      'адаптивний header, sidebar, search overlay і навігація',
-      'збірка з оптимізацією стилів, скриптів, шрифтів і зображень',
-    ],
-    demoUrl: 'https://mr-vadym.github.io/inweb/',
-    repoUrl: 'https://github.com/Mr-Vadym/inweb',
+    stack: ['Gulp', 'SCSS', 'jQuery', 'Responsive'],
+    demo: 'https://mr-vadym.github.io/inweb/',
+    repo: 'https://github.com/Mr-Vadym/inweb',
   },
-];
-
-const designCases = [
-  {
-    title: 'Календар подій',
-    type: 'Поліграфія / editorial layout',
-    image: 'images/case-events-calendar.png',
-    description: 'Преміальний календар подій ARTA Club: обкладинка, розвороти, темна палітра, типографіка і підготовка презентаційного макета.',
-    stack: ['Photoshop', 'Layout', 'Typography', 'Print'],
-  },
-  {
-    title: 'Лого для футбольної команди',
-    type: 'Айдентика / sport branding',
-    image: 'images/case-football-logo.jpg',
-    description: 'Емблема Slavuta Kids з тигром, футбольним мʼячем і щитовою формою для форми, прапорів, медалей та турнірної атрибутики.',
-    stack: ['Illustrator', 'Logo', 'Vector', 'Brand'],
-    usage: [
-      {
-        image: 'images/case-football-logo-awards.jpg',
-        label: 'Нагородна атрибутика',
-      },
-      {
-        image: 'images/case-football-logo-team.png',
-        label: 'Прапор команди',
-      },
-    ],
-  },
-  {
-    title: 'Сертифікат для lash-майстра',
-    type: 'Поліграфія / beauty voucher',
-    image: 'images/case-lashes-certificate.jpg',
-    description: 'Подарунковий сертифікат на нарощування вій у чорному та золотому стилі з полями для суми, дати й контактів.',
-    stack: ['Photoshop', 'Print', 'Typography', 'Social'],
-  },
-  {
-    title: 'Меню Ardente Pizza',
-    type: 'Меню / HoReCa design',
-    image: 'images/case-ardente-menu.jpg',
-    description: 'Дизайн ресторанного меню з категоріями страв, цінами, контактним блоком і яскравою літньою подачею для друку.',
-    stack: ['Photoshop', 'Menu', 'Print', 'Layout'],
-  },
-  {
-    title: 'Наліпка Meat Store',
-    type: 'Пакування / label design',
-    image: 'images/case-meat-store-sticker.png',
-    description: 'Кругла наліпка для мʼясного магазину з логотипом, дескриптором, Instagram-нікнеймом і телефоном.',
-    stack: ['Illustrator', 'Sticker', 'Logo', 'Print'],
-  },
-  {
-    title: 'Мокап коробки 1Power',
-    type: 'Пакування / product mockup',
-    image: 'images/case-box-branding-mockup.jpg',
-    description: 'Накладання дизайну на мокап коробки для кабелю: брендована графіка, патерн, бокова панель і товар у реалістичній подачі.',
-    stack: ['Photoshop', 'Mockup', 'Packaging', 'Product'],
-  },
-];
-
-const toolGroups = [
-  {
-    title: 'Frontend',
-    tools: ['HTML5', 'CSS3', 'SCSS', 'BEM', 'JavaScript', 'jQuery', 'Vite', 'Gulp', 'Git'],
-  },
-  {
-    title: 'Design',
-    tools: ['Illustrator', 'Photoshop', 'Figma', 'CorelDRAW', 'After Effects', 'Premiere Pro', 'Blender'],
-  },
-  {
-    title: 'Workflow',
-    tools: ['GitHub Pages', 'WordPress', 'ChatGPT', 'Claude', 'AI images'],
-  },
-];
-
-const skills = [
-  'Семантичний HTML',
-  'Адаптивна CSS-верстка',
-  'JavaScript ES6+',
-  'Vite',
-  'Gulp',
-  'SCSS',
-  'jQuery',
-  'Adobe Illustrator',
-  'Adobe Photoshop',
-  'Figma',
-  'Blender',
-  'After Effects',
-  'DOM-інтеракції',
-  'GitHub Pages',
-  'Підготовка до друку',
 ];
 
 export default function Page() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [entered, setEntered] = useState(false);
 
-  const sections = useMemo(() => ['hero', 'services', 'work', 'design', 'tools', 'contact'], []);
+  useEffect(() => setEntered(true), []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        const visible = entries.find(entry => entry.isIntersecting);
-        if (visible) setActiveSection(visible.target.id);
-      },
-      { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 }
-    );
-
-    sections.forEach(id => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, [sections]);
-
-  const navItems = [
-    ['hero', 'Головна'],
-    ['services', 'Послуги'],
-    ['work', 'Роботи'],
-    ['design', 'Дизайн'],
-    ['tools', 'Інструменти'],
-    ['contact', 'Контакти'],
-  ];
+  const scrollTo = target => {
+    document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <>
-      <header className="site-header">
-        <a className="brand" href="#hero" aria-label="На головну">
-          <span className="brand-mark"><Code2 size={18} /></span>
-          <span>Vadym Loiko</span>
-        </a>
-        <nav className={menuOpen ? 'nav nav-open' : 'nav'} aria-label="Основна навігація">
-          {navItems.map(([id, label]) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className={activeSection === id ? 'active' : ''}
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
-        <a className="header-cta" href="mailto:vaddimmura@gmail.com">
-          <Mail size={18} />
-          <span>Написати</span>
-        </a>
-        <button
-          className="icon-button menu-button"
-          type="button"
-          aria-label={menuOpen ? 'Закрити меню' : 'Відкрити меню'}
-          onClick={() => setMenuOpen(value => !value)}
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </header>
+    <main className={entered ? 'portfolio is-ready' : 'portfolio'}>
+      <section className="split-hero" id="home">
+        <header className="split-header">
+          <a href="#home" className="wordmark">VL<span>.</span></a>
+          <p>Vadym Loiko / Portfolio 2026 · Design + Code</p>
+          <a href="mailto:vaddimmura@gmail.com"><Mail size={17} /> Contact</a>
+        </header>
 
-      <main>
-        <section className="hero" id="hero">
-          <div className="hero-media">
-            <figure className="portrait-card">
-              <img
-                src="images/profile-vadym.jpg"
-                alt="Фото Вадима Лойка"
-              />
-              <figcaption>
-                <strong>Markup Developer</strong>
-                <span>HTML / CSS / JS + design</span>
-              </figcaption>
-            </figure>
-            <div className="code-window">
-              <div className="window-bar">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <pre>{`const developer = {
-  craft: ['HTML', 'CSS', 'JS'],
-  design: ['print', 'digital', '3D'],
-  goal: 'make it work and look right'
-};`}</pre>
-            </div>
-            <div className="floating-chip chip-one"><Zap size={16} /> HTML / SCSS / JS</div>
-            <div className="floating-chip chip-two"><Sparkles size={16} /> Print + Digital</div>
-          </div>
-          <div className="hero-content">
-            <p className="eyebrow"><Braces size={16} /> HTML CSS JS / Graphic Design</p>
-            <h1>Верстаю адаптивні сайти на HTML, CSS і JavaScript</h1>
-            <p className="hero-copy">
-              Перетворюю макети на живі сторінки: чиста структура, акуратні стилі,
-              responsive-поведінка і прості JS-інтеракції без зайвого шуму.
-              Паралельно працюю з графікою для друку, web-банерами, 3D і motion.
-            </p>
-            <div className="hero-actions">
-              <a className="primary-button" href="#work">
-                Web-кейси
-                <ArrowUpRight size={18} />
-              </a>
-              <a className="secondary-button" href="#design">Дизайн-портфоліо</a>
-            </div>
-          </div>
-        </section>
+        <div className="intro">
+          <p>Two disciplines. One visual mindset.</p>
+          <h1>Choose what<br />you want to see.</h1>
+          <span>Graphic / Creative Design <i>+</i> Front-end Markup</span>
+        </div>
 
-        <section className="metrics" aria-label="Ключові показники">
-          <div><strong>2022-2024</strong><span>верстка в команді inWeb</span></div>
-          <div><strong>2 напрями</strong><span>frontend + graphic design</span></div>
-        </section>
-
-        <section className="section" id="services">
-          <div className="section-heading">
-            <p className="eyebrow"><Layers3 size={16} /> Що роблю</p>
-            <h2>Від макета до живої сторінки</h2>
-          </div>
-          <div className="service-grid">
-            <article>
-              <MonitorSmartphone size={26} />
-              <h3>Адаптивна верстка</h3>
-              <p>Верстаю сторінки по Figma-макетах: desktop, tablet, mobile, hover/focus-стани й нормальна структура файлів.</p>
-            </article>
-            <article>
-              <Palette size={26} />
-              <h3>Дизайн для web і друку</h3>
-              <p>Готую банери, поліграфію, брендовану продукцію, web-графіку та файли для друку або нанесення.</p>
-            </article>
-            <article>
-              <Rocket size={26} />
-              <h3>Рух і 3D</h3>
-              <p>Створюю motion-креативи, прості відео, Blender-рендери й 3D-візуалізації для web, презентацій і промоматеріалів.</p>
-            </article>
-          </div>
-        </section>
-
-        <section className="section work-section" id="work">
-          <div className="section-heading">
-            <p className="eyebrow"><Sparkles size={16} /> Кейси</p>
-            <h2>Web-проєкти, які вже можна відкрити</h2>
-          </div>
-          <div className="project-grid">
-            {projects.map(project => (
-              <article className="project-card" key={project.title}>
-                <img className="project-image" src={project.image} alt={`Скрін проєкту ${project.title}`} />
-                <div className="project-content">
-                  <span>{project.type}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <ul className="project-points">
-                    {project.highlights.map(item => (
-                      <li key={item}><Check size={15} /> {item}</li>
-                    ))}
-                  </ul>
-                  <div className="tag-row">
-                    {project.stack.map(tag => <small key={tag}>{tag}</small>)}
-                  </div>
-                  <div className="project-actions">
-                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                      Демо
-                      <ArrowUpRight size={17} />
-                    </a>
-                    <a href={project.repoUrl} target="_blank" rel="noreferrer">
-                      Код
-                      <Code2 size={17} />
-                    </a>
-                  </div>
+        <div className="path-grid">
+          {Object.entries(paths).map(([key, item]) => {
+            const Icon = item.icon;
+            return (
+              <button className={"path path-" + key} key={key} onClick={() => scrollTo(item.target)}>
+                <div className="path-top">
+                  <span>{item.kicker}</span>
+                  <Icon size={24} />
                 </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section design-section" id="design">
-          <div className="section-heading">
-            <p className="eyebrow"><Palette size={16} /> Graphic & Digital Design</p>
-            <h2>Графічний дизайн, digital-креативи та 3D</h2>
-          </div>
-          <div className="design-grid">
-            {designCases.map(item => (
-              <article className="design-card" key={item.title}>
-                <img className="design-image" src={item.image} alt={`Прев'ю напряму ${item.title}`} />
-                <div className="design-content">
-                  <span>{item.type}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  {item.usage && (
-                    <div className="design-usage" aria-label={`Застосування ${item.title}`}>
-                      {item.usage.map(usage => (
-                        <figure key={usage.image}>
-                          <img src={usage.image} alt={`${usage.label}: ${item.title}`} />
-                          <figcaption>{usage.label}</figcaption>
-                        </figure>
-                      ))}
-                    </div>
-                  )}
-                  <div className="tag-row">
-                    {item.stack.map(tag => <small key={tag}>{tag}</small>)}
-                  </div>
+                <div className="path-body">
+                  <h2>{item.title.split('\n').map((line, i) => <span key={i}>{line}</span>)}</h2>
+                  <p>{item.copy}</p>
+                  <div className="path-tags">{item.meta.map(tag => <small key={tag}>{tag}</small>)}</div>
                 </div>
-              </article>
-            ))}
-          </div>
-        </section>
+                <div className="path-enter">Explore <ArrowDown size={19} /></div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
 
-        <section className="section tools-section" id="tools">
-          <div className="section-heading">
-            <p className="eyebrow"><Image size={16} /> Інструменти</p>
-            <h2>Програми й стек, з якими працюю</h2>
-          </div>
-          <div className="tools-grid">
-            {toolGroups.map(group => (
-              <article className="tool-group" key={group.title}>
-                <h3>{group.title}</h3>
-                <div className="tool-badges">
-                  {group.tools.map(tool => <span key={tool}>{tool}</span>)}
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="motion-note">
-            <Film size={22} />
-            <p>Motion reel, GIF-прев'ю або короткі відео з Blender / After Effects добре доповнять цей блок.</p>
-          </div>
-        </section>
-
-        <section className="skills-band" aria-label="Технології">
-          <div className="skills-track">
-            {[...skills, ...skills].map((skill, index) => (
-              <span key={`${skill}-${index}`}><Check size={15} /> {skill}</span>
-            ))}
-          </div>
-        </section>
-
-        <section
-          className="contact-section"
-          id="contact"
-          style={{ '--contact-bg-image': 'url("images/profile-bg-grain.jpg")' }}
-        >
+      <section className="discipline design-side" id="design">
+        <div className="section-number">01</div>
+        <div className="discipline-head">
           <div>
-            <p className="eyebrow"><Mail size={16} /> Контакти</p>
-            <h2>Є макет, дизайн-задача або сайт, який треба доробити?</h2>
-            <p>
-              Напишіть коротко, що потрібно зробити: верстка, правки, банери,
-              підготовка до друку, 3D або motion. Далі швидко розберемо задачу по суті.
-            </p>
+            <p className="overline"><Sparkles size={15} /> Design portfolio</p>
+            <h2>Creative work built<br />for attention.</h2>
           </div>
-          <div className="contact-panel">
-            <a href="mailto:vaddimmura@gmail.com"><Mail size={20} /> vaddimmura@gmail.com</a>
-            <a href="https://github.com/Mr-Vadym" target="_blank" rel="noreferrer"><Code2 size={20} /> GitHub</a>
-            <a href="#hero"><ArrowUpRight size={20} /> Повернутися нагору</a>
+          <p className="section-copy">Commercial visuals, performance advertising and AI-assisted production. The newest work leads; older print and identity projects stay as supporting range.</p>
+        </div>
+
+        <div className="featured-case">
+          <div className="featured-copy">
+            <span>FEATURED CASE / 2026</span>
+            <h3>Performance Ads<br />& E-commerce</h3>
+            <p>A self-initiated portfolio case demonstrating product layouts, offer mechanics, reviews, infographics, interactive concepts and format adaptation.</p>
+            <div className="case-tags"><span>Photoshop</span><span>AI-assisted</span><span>Ad Creative</span><span>Production</span></div>
+            <button type="button">Case 01 — template ready <ArrowUpRight size={18} /></button>
           </div>
-        </section>
-      </main>
-    </>
+          <div className="featured-visual">
+            <div className="visual-card visual-a">AD<br />01</div>
+            <div className="visual-card visual-b">AD<br />02</div>
+            <div className="visual-card visual-c">AD<br />03</div>
+            <span>Replace with original fictional-brand portfolio visuals</span>
+          </div>
+        </div>
+
+        <div className="campaign-preview">
+          <div className="preview-label"><span>CASE 01 / FULL PREVIEW</span><p>Placeholder content map — every tile will later be replaced by an original portfolio creative.</p></div>
+
+          <article className="mock-block mock-hero">
+            <div className="mock-copy"><span>01 / HERO</span><h3>Campaign<br />Key Visual</h3><p>Your strongest vertical creative opens the case and establishes the campaign art direction.</p></div>
+            <div className="mock-art mock-art-hero"><b>HERO</b><small>900 × 1350</small></div>
+          </article>
+
+          <div className="mock-section-head"><span>02</span><div><h3>Creative Variations</h3><p>Same brand. Same campaign. Three different advertising angles.</p></div></div>
+          <div className="mock-three">
+            {['VARIATION A','VARIATION B','VARIATION C'].map((label, i) => <div className={"mock-art mock-v"+(i+1)} key={label}><b>{label}</b><small>900 × 1350</small></div>)}
+          </div>
+
+          <div className="mock-section-head"><span>03</span><div><h3>Benefits & Infographic</h3><p>Information-heavy creatives get more breathing room and are shown as a pair.</p></div></div>
+          <div className="mock-two">
+            <div className="mock-art mock-info"><b>BENEFITS</b><i>01 — benefit<br/>02 — benefit<br/>03 — benefit</i><small>900 × 1350</small></div>
+            <div className="mock-art mock-info mock-info-alt"><b>INFOGRAPHIC</b><i>DATA<br/>PRODUCT<br/>RESULT</i><small>900 × 1350</small></div>
+          </div>
+
+          <div className="mock-section-head"><span>04–05</span><div><h3>Trust & Interaction</h3><p>A review-led ad next to an interaction-first concept shows range without breaking the campaign system.</p></div></div>
+          <div className="mock-feature-pair">
+            <div className="mock-art mock-review"><span>★★★★★</span><b>“REVIEW<br/>CREATIVE”</b><i>Verified buyer</i><small>900 × 1350</small></div>
+            <div className="mock-art mock-interactive"><span>QUIZ / SCRATCH / GAME</span><b>INTERACTIVE</b><div className="fake-options"><i>A</i><i>B</i><i>C</i><i>D</i></div><small>900 × 1350</small></div>
+          </div>
+
+          <div className="mock-section-head"><span>06</span><div><h3>Format Adaptation</h3><p>Finish by proving the visual system survives a different aspect ratio.</p></div></div>
+          <div className="mock-art mock-landscape"><b>LANDSCAPE ADAPTATION</b><span>same campaign / rebuilt composition</span><small>1350 × 900</small></div>
+        </div>
+
+        <div className="case-structure">
+          <div className="structure-intro">
+            <span>CASE 01 / STRUCTURE</span>
+            <h3>A complete campaign,<br />not a gallery.</h3>
+            <p>These slots define the final case. All visuals will belong to one fictional brand and one consistent campaign system.</p>
+          </div>
+          <div className="structure-grid">
+            {caseSections.map(([number, title, description, format]) => (
+              <article className="structure-card" key={number}>
+                <span>{number}</span>
+                <div><h4>{title}</h4><p>{description}</p></div>
+                <small>{format}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="process-strip">
+          <span>ROLE</span><strong>Creative / Graphic Designer</strong>
+          <span>FOCUS</span><strong>Performance · E-commerce · AI-assisted production</strong>
+          <span>OUTPUT</span><strong>Original fictional campaign</strong>
+        </div>
+
+        <div className="case-list">
+          {designPreview.map(([title, type, status], index) => (
+            <article key={title}>
+              <span>0{index + 1}</span><h3>{title}</h3><p>{type}</p><small>{status}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="discipline code-side" id="code">
+        <div className="section-number">02</div>
+        <div className="discipline-head">
+          <div>
+            <p className="overline"><Code2 size={15} /> Code portfolio</p>
+            <h2>From layout<br />to working UI.</h2>
+          </div>
+          <p className="section-copy">Responsive markup with clean structure, SCSS and practical JavaScript. Design awareness is an advantage here, not a competing job title.</p>
+        </div>
+
+        <div className="code-grid">
+          {codeProjects.map(project => (
+            <article className="code-card" key={project.title}>
+              <div className="browser-frame"><span></span><span></span><span></span><img src={project.image} alt={project.title} /></div>
+              <div className="code-card-copy">
+                <span>{project.type}</span><h3>{project.title}</h3>
+                <div>{project.stack.map(tag => <small key={tag}>{tag}</small>)}</div>
+                <p><a href={project.demo} target="_blank" rel="noreferrer">Live <ArrowUpRight size={16} /></a><a href={project.repo} target="_blank" rel="noreferrer">GitHub <Code2 size={16} /></a></p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <footer>
+        <div><span>Available for remote work</span><h2>Have a project<br />or a role in mind?</h2></div>
+        <a href="mailto:vaddimmura@gmail.com">vaddimmura@gmail.com <ArrowUpRight size={22} /></a>
+        <p>Vadym Loiko © 2026</p>
+      </footer>
+    </main>
   );
 }
-
