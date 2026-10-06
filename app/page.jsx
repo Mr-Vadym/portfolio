@@ -127,6 +127,35 @@ export default function Page() {
           </div>
         </div>
 
+        <div className="campaign-preview">
+          <div className="preview-label"><span>CASE 01 / FULL PREVIEW</span><p>Placeholder content map — every tile will later be replaced by an original portfolio creative.</p></div>
+
+          <article className="mock-block mock-hero">
+            <div className="mock-copy"><span>01 / HERO</span><h3>Campaign<br />Key Visual</h3><p>Your strongest vertical creative opens the case and establishes the campaign art direction.</p></div>
+            <div className="mock-art mock-art-hero"><b>HERO</b><small>900 × 1350</small></div>
+          </article>
+
+          <div className="mock-section-head"><span>02</span><div><h3>Creative Variations</h3><p>Same brand. Same campaign. Three different advertising angles.</p></div></div>
+          <div className="mock-three">
+            {['VARIATION A','VARIATION B','VARIATION C'].map((label, i) => <div className={"mock-art mock-v"+(i+1)} key={label}><b>{label}</b><small>900 × 1350</small></div>)}
+          </div>
+
+          <div className="mock-section-head"><span>03</span><div><h3>Benefits & Infographic</h3><p>Information-heavy creatives get more breathing room and are shown as a pair.</p></div></div>
+          <div className="mock-two">
+            <div className="mock-art mock-info"><b>BENEFITS</b><i>01 — benefit<br/>02 — benefit<br/>03 — benefit</i><small>900 × 1350</small></div>
+            <div className="mock-art mock-info mock-info-alt"><b>INFOGRAPHIC</b><i>DATA<br/>PRODUCT<br/>RESULT</i><small>900 × 1350</small></div>
+          </div>
+
+          <div className="mock-section-head"><span>04–05</span><div><h3>Trust & Interaction</h3><p>A review-led ad next to an interaction-first concept shows range without breaking the campaign system.</p></div></div>
+          <div className="mock-feature-pair">
+            <div className="mock-art mock-review"><span>★★★★★</span><b>“REVIEW<br/>CREATIVE”</b><i>Verified buyer</i><small>900 × 1350</small></div>
+            <div className="mock-art mock-interactive"><span>QUIZ / SCRATCH / GAME</span><b>INTERACTIVE</b><div className="fake-options"><i>A</i><i>B</i><i>C</i><i>D</i></div><small>900 × 1350</small></div>
+          </div>
+
+          <div className="mock-section-head"><span>06</span><div><h3>Format Adaptation</h3><p>Finish by proving the visual system survives a different aspect ratio.</p></div></div>
+          <div className="mock-art mock-landscape"><b>LANDSCAPE ADAPTATION</b><span>same campaign / rebuilt composition</span><small>1350 × 900</small></div>
+        </div>
+
         <div className="case-structure">
           <div className="structure-intro">
             <span>CASE 01 / STRUCTURE</span>
