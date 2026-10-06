@@ -28,6 +28,15 @@ const designPreview = [
   ['Premium & Lifestyle', 'Editorial · product · brand visuals', 'Selected work'],
 ];
 
+const caseSections = [
+  ['01', 'Campaign hero', 'Primary key visual / strongest first impression', '900 × 1350'],
+  ['02', 'Creative variations', 'Three connected ad directions from one campaign', '3 × 900 × 1350'],
+  ['03', 'Benefits & infographic', 'Product value translated into clear visual information', '2 × 900 × 1350'],
+  ['04', 'Social proof', 'Review-led creative with trust and product hierarchy', '900 × 1350'],
+  ['05', 'Interactive concept', 'Quiz, scratch, carousel or another interaction-first mechanic', '900 × 1350'],
+  ['06', 'Format adaptation', 'One selected concept rebuilt for landscape', '1350 × 900'],
+];
+
 const codeProjects = [
   {
     title: 'Monblan Project',
@@ -116,6 +125,29 @@ export default function Page() {
             <div className="visual-card visual-c">AD<br />03</div>
             <span>Replace with original fictional-brand portfolio visuals</span>
           </div>
+        </div>
+
+        <div className="case-structure">
+          <div className="structure-intro">
+            <span>CASE 01 / STRUCTURE</span>
+            <h3>A complete campaign,<br />not a gallery.</h3>
+            <p>These slots define the final case. All visuals will belong to one fictional brand and one consistent campaign system.</p>
+          </div>
+          <div className="structure-grid">
+            {caseSections.map(([number, title, description, format]) => (
+              <article className="structure-card" key={number}>
+                <span>{number}</span>
+                <div><h4>{title}</h4><p>{description}</p></div>
+                <small>{format}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="process-strip">
+          <span>ROLE</span><strong>Creative / Graphic Designer</strong>
+          <span>FOCUS</span><strong>Performance · E-commerce · AI-assisted production</strong>
+          <span>OUTPUT</span><strong>Original fictional campaign</strong>
         </div>
 
         <div className="case-list">
