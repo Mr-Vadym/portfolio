@@ -111,81 +111,51 @@ export default function Page() {
           <p className="section-copy">Commercial visuals, performance advertising and AI-assisted production. The newest work leads; older print and identity projects stay as supporting range.</p>
         </div>
 
-        <div className="featured-case">
-          <div className="featured-copy">
-            <span>FEATURED CASE / 2026</span>
-            <h3>Performance Ads<br />& E-commerce</h3>
-            <p>A self-initiated portfolio case demonstrating product layouts, offer mechanics, reviews, infographics, interactive concepts and format adaptation.</p>
-            <div className="case-tags"><span>Photoshop</span><span>AI-assisted</span><span>Ad Creative</span><span>Production</span></div>
-            <button type="button">Case 01 — template ready <ArrowUpRight size={18} /></button>
+
+        <div className="luma-intro" id="luma">
+          <div className="luma-intro-copy">
+            <span className="luma-eyebrow">FEATURED CASE / 2026 / CONCEPT CAMPAIGN</span>
+            <h3>LUMA<span>®</span><br />Barrier Cloud Cream</h3>
+            <p>One skincare product. Eight coordinated advertising creatives. A self-initiated campaign exploring offer-led design, product storytelling, ingredients, lifestyle imagery and format adaptation.</p>
+            <div className="case-tags"><span>Art Direction</span><span>Photoshop</span><span>AI-assisted Imagery</span><span>Digital Ads</span></div>
+            <a className="luma-jump" href="#luma-gallery">Explore the campaign <ArrowDown size={18} /></a>
           </div>
-          <div className="featured-visual">
-            <div className="visual-card visual-a">AD<br />01</div>
-            <div className="visual-card visual-b">AD<br />02</div>
-            <div className="visual-card visual-c">AD<br />03</div>
-            <span>Replace with original fictional-brand portfolio visuals</span>
-          </div>
-        </div>
-
-        <div className="campaign-preview">
-          <div className="preview-label"><span>CASE 01 / FULL PREVIEW</span><p>Placeholder content map — every tile will later be replaced by an original portfolio creative.</p></div>
-
-          <article className="mock-block mock-hero">
-            <div className="mock-copy"><span>01 / HERO</span><h3>Campaign<br />Key Visual</h3><p>Your strongest vertical creative opens the case and establishes the campaign art direction.</p></div>
-            <div className="mock-art mock-art-hero"><b>HERO</b><small>900 × 1350</small></div>
-          </article>
-
-          <div className="mock-section-head"><span>02</span><div><h3>Creative Variations</h3><p>Same brand. Same campaign. Three different advertising angles.</p></div></div>
-          <div className="mock-three">
-            {['VARIATION A','VARIATION B','VARIATION C'].map((label, i) => <div className={"mock-art mock-v"+(i+1)} key={label}><b>{label}</b><small>900 × 1350</small></div>)}
-          </div>
-
-          <div className="mock-section-head"><span>03</span><div><h3>Benefits & Infographic</h3><p>Information-heavy creatives get more breathing room and are shown as a pair.</p></div></div>
-          <div className="mock-two">
-            <div className="mock-art mock-info"><b>BENEFITS</b><i>01 — benefit<br/>02 — benefit<br/>03 — benefit</i><small>900 × 1350</small></div>
-            <div className="mock-art mock-info mock-info-alt"><b>INFOGRAPHIC</b><i>DATA<br/>PRODUCT<br/>RESULT</i><small>900 × 1350</small></div>
-          </div>
-
-          <div className="mock-section-head"><span>04–05</span><div><h3>Trust & Interaction</h3><p>A review-led ad next to an interaction-first concept shows range without breaking the campaign system.</p></div></div>
-          <div className="mock-feature-pair">
-            <div className="mock-art mock-review"><span>★★★★★</span><b>“REVIEW<br/>CREATIVE”</b><i>Verified buyer</i><small>900 × 1350</small></div>
-            <div className="mock-art mock-interactive"><span>QUIZ / SCRATCH / GAME</span><b>INTERACTIVE</b><div className="fake-options"><i>A</i><i>B</i><i>C</i><i>D</i></div><small>900 × 1350</small></div>
-          </div>
-
-          <div className="mock-section-head"><span>06</span><div><h3>Format Adaptation</h3><p>Finish by proving the visual system survives a different aspect ratio.</p></div></div>
-          <div className="mock-art mock-landscape"><b>LANDSCAPE ADAPTATION</b><span>same campaign / rebuilt composition</span><small>1350 × 900</small></div>
-        </div>
-
-        <div className="case-structure">
-          <div className="structure-intro">
-            <span>CASE 01 / STRUCTURE</span>
-            <h3>A complete campaign,<br />not a gallery.</h3>
-            <p>These slots define the final case. All visuals will belong to one fictional brand and one consistent campaign system.</p>
-          </div>
-          <div className="structure-grid">
-            {caseSections.map(([number, title, description, format]) => (
-              <article className="structure-card" key={number}>
-                <span>{number}</span>
-                <div><h4>{title}</h4><p>{description}</p></div>
-                <small>{format}</small>
-              </article>
-            ))}
+          <div className="luma-cover">
+            <img src="/images/luma-01-hero.jpg" alt="LUMA Barrier Cloud Cream campaign hero advertising creative" />
+            <div className="luma-cover-label">01 / CAMPAIGN KEY VISUAL</div>
           </div>
         </div>
 
-        <div className="process-strip">
-          <span>ROLE</span><strong>Creative / Graphic Designer</strong>
-          <span>FOCUS</span><strong>Performance · E-commerce · AI-assisted production</strong>
-          <span>OUTPUT</span><strong>Original fictional campaign</strong>
+        <div className="luma-gallery" id="luma-gallery">
+          <div className="luma-gallery-heading"><span>THE CAMPAIGN / 08 CREATIVES</span><p>Designed as a coherent visual system across multiple advertising angles and placements.</p></div>
+
+          <div className="luma-section-heading"><span>01</span><div><h3>Product & offer</h3><p>Clear product hierarchy, a distinctive visual language and direct promotional messaging.</p></div></div>
+          <div className="luma-grid luma-grid-three">
+            <figure><img src="/images/luma-02-product.jpg" alt="LUMA product-focused skincare advertising creative" loading="lazy" /><figcaption>01 / Product story</figcaption></figure>
+            <figure><img src="/images/luma-03-promo.jpg" alt="LUMA limited-time 20 percent off promotional creative" loading="lazy" /><figcaption>02 / Promotional offer</figcaption></figure>
+            <figure><img src="/images/luma-04-lifestyle.jpg" alt="LUMA lifestyle skincare advertising creative" loading="lazy" /><figcaption>03 / Lifestyle</figcaption></figure>
+          </div>
+
+          <div className="luma-section-heading"><span>02</span><div><h3>Benefits & ingredients</h3><p>Turning product attributes into approachable, easy-to-scan visuals.</p></div></div>
+          <div className="luma-grid luma-grid-two">
+            <figure><img src="/images/luma-05-benefits.jpg" alt="LUMA three product benefits creative" loading="lazy" /><figcaption>04 / Benefit-led creative</figcaption></figure>
+            <figure><img src="/images/luma-06-infographic.jpg" alt="LUMA ingredient infographic featuring ceramides and squalane" loading="lazy" /><figcaption>05 / Ingredient infographic</figcaption></figure>
+          </div>
+
+          <div className="luma-section-heading"><span>03</span><div><h3>Review concept</h3><p>A testimonial-style composition demonstrating social-proof hierarchy. The review is illustrative, not a verified customer endorsement.</p></div></div>
+          <div className="luma-grid luma-grid-review">
+            <figure><img src="/images/luma-07-review.jpg" alt="Illustrative LUMA customer-review-style advertising concept" loading="lazy" /><figcaption>06 / Illustrative testimonial</figcaption></figure>
+            <div className="luma-editorial"><span>THE APPROACH</span><h4>One visual identity.<br />Different reasons to care.</h4><p>The campaign balances expressive typography, product-led imagery and concise benefit messaging. Each creative serves a different communication goal while retaining a recognizable brand system.</p><small>Personal portfolio concept · Not a commissioned brand campaign</small></div>
+          </div>
+
+          <div className="luma-section-heading"><span>04</span><div><h3>Format adaptation</h3><p>The same visual language rebuilt for a landscape placement rather than simply cropped.</p></div></div>
+          <div className="luma-grid luma-grid-wide">
+            <figure><img src="/images/luma-08-landscape.jpg" alt="LUMA landscape advertising format adaptation" loading="lazy" /><figcaption>07 / Landscape adaptation</figcaption></figure>
+          </div>
         </div>
 
-        <div className="case-list">
-          {designPreview.map(([title, type, status], index) => (
-            <article key={title}>
-              <span>0{index + 1}</span><h3>{title}</h3><p>{type}</p><small>{status}</small>
-            </article>
-          ))}
-        </div>
+        <div className="luma-summary"><div><span>ROLE</span><strong>Concept · Art Direction · Graphic Design</strong></div><div><span>TOOLS</span><strong>Adobe Photoshop · AI-assisted image production</strong></div><div><span>DELIVERABLES</span><strong>8 finished advertising creatives</strong></div></div>
+
       </section>
 
       <section className="discipline code-side" id="code">
