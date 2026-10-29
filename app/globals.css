@@ -187,3 +187,6 @@
 @media(max-width:900px){.intro-with-photo{grid-template-columns:1fr minmax(190px,.55fr);gap:22px}.intro-title h1{font-size:clamp(48px,7vw,75px)}.intro-portrait{max-height:360px}}
 @media(max-width:650px){.split-hero{grid-template-rows:auto auto auto;padding-bottom:24px}.split-header{min-height:70px;grid-template-columns:auto 1fr}.split-header>p{display:none}.hero-header-links{gap:15px!important}.hero-header-links a span{display:none}.intro-with-photo{grid-template-columns:1fr 38%;gap:15px;align-items:stretch;padding:32px 0}.intro-title{gap:14px;justify-content:center}.intro-title h1{font-size:clamp(36px,9vw,65px)}.intro-title p,.intro-title>span{font-size:9px;line-height:1.5}.intro-portrait{min-height:200px;max-height:310px}.intro-portrait figcaption{left:8px;right:8px;bottom:10px;font-size:7px;display:block}.intro-portrait figcaption span{display:none}.path-grid{min-height:unset}.path{min-height:340px}}
 @media(max-width:400px){.intro-with-photo{grid-template-columns:1fr 35%}.intro-title h1{font-size:35px}.intro-portrait{min-height:180px}}
+
+/* Keep the CTA divider clear of wrapped skill tags on small screens. */
+@media (max-width:650px){.path-body{margin-bottom:22px}.path-enter{flex-shrink:0}}
