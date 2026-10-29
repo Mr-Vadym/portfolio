@@ -193,7 +193,7 @@ export default function Page() {
             <div><span className="fox-kicker">02 / SELECTED PRINT WORK</span><h3>Print<em>Brochures & business cards</em></h3></div>
             <p>Selected commercial print projects: concise layouts, purposeful typography and visual systems adapted to different businesses.</p>
           </header>
-          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span className="tool-tag tool-ai"><img src="/images/tool-illustrator.webp" alt="" /> Illustrator</span><span className="tool-tag tool-ps"><b>Ps</b> Photoshop</span></div>
+          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span className="tool-tag tool-ai"><img src="/images/tool-illustrator.webp" alt="" /> Illustrator</span><span className="tool-tag tool-ps"><img src="/images/tool-photoshop.webp" alt="" /> Photoshop</span></div>
           <div className="fox-subhead"><span>01 / BROCHURES</span><h4>Complex information.<br/>Clear presentation.</h4><p>Product communication for FOXART, designed within an established brand identity. Brochure layouts and technical reference materials.</p></div>
           <div className="fox-media-grid">
             <figure><div className="fox-artwork"><img src="/images/foxart-brochure.jpg" alt="FOXART lighting solutions brochure" loading="lazy"/></div><figcaption>FOXART / Lighting solutions brochure</figcaption></figure>
