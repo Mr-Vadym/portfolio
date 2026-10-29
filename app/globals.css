@@ -39,3 +39,34 @@
 .luma-summary strong{font-size:14px;font-weight:500;line-height:1.6}
 @media(max-width:850px){.luma-intro{grid-template-columns:1fr}.luma-cover{min-height:460px}.luma-cover img{height:430px}.luma-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))}.luma-grid-three figure:last-child{grid-column:1/-1;max-width:calc(50% - 9px)}.luma-summary{grid-template-columns:1fr}}
 @media(max-width:580px){.luma-intro-copy{padding:28px}.luma-intro h3{font-size:43px}.luma-cover{min-height:360px;padding:20px}.luma-cover img{height:350px}.luma-gallery{margin-top:65px}.luma-gallery-heading{display:block}.luma-gallery-heading p{margin-top:12px}.luma-section-heading{grid-template-columns:34px 1fr;margin-top:55px}.luma-grid-three,.luma-grid-two,.luma-grid-review{grid-template-columns:1fr}.luma-grid-three figure:last-child{grid-column:auto;max-width:none}.luma-editorial{padding:30px}.luma-grid figure img{aspect-ratio:auto}.luma-summary{margin-top:60px}}
+
+/* FOXART commercial case */
+.fox-case{margin-top:clamp(100px,13vw,190px);padding-top:50px;border-top:1px solid rgba(255,255,255,.24);scroll-margin-top:30px}
+.fox-head{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:end}
+.fox-kicker,.fox-subhead>span,.fox-feature-copy>span,.fox-digital-note>span{color:#ff5252;font-size:11px;font-weight:800;letter-spacing:.14em}
+.fox-head h3{font-size:clamp(75px,11vw,170px);line-height:.85;letter-spacing:-.085em;margin:24px 0 0}
+.fox-head h3>span{color:#f44343}.fox-head h3 em{display:block;font-size:clamp(23px,2.5vw,40px);line-height:1.1;letter-spacing:-.04em;font-style:normal;font-weight:600;margin-top:25px;color:#e8e8e4}
+.fox-head>p{font-size:16px;line-height:1.8;color:#b3b3ae;margin:0}
+.fox-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22);padding:19px 0;margin:55px 0;font-size:10px;letter-spacing:.12em;color:#aaa}
+.fox-feature{display:grid;grid-template-columns:.78fr 1.22fr;min-height:570px;border:1px solid rgba(255,255,255,.2)}
+.fox-feature-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(25px,4vw,60px)}
+.fox-feature-copy h4,.fox-subhead h4{font-size:clamp(36px,4.4vw,67px);letter-spacing:-.06em;line-height:1;margin:23px 0}
+.fox-feature-copy p,.fox-subhead p{font-size:15px;line-height:1.75;color:#b5b5af}
+.fox-artwork{position:relative;overflow:hidden;min-height:310px;background:linear-gradient(145deg,#292b2e,#151617);display:grid;place-items:center}
+.fox-artwork-identity{background:linear-gradient(140deg,#3b1115,#c1313b)}
+.fox-artwork img{position:relative;z-index:2;display:block;width:100%;height:100%;object-fit:contain}
+.fox-image-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:clamp(28px,4vw,60px);font-weight:900;letter-spacing:-.06em;color:rgba(255,255,255,.7)}
+.fox-image-fallback small{font-size:10px;letter-spacing:.13em;margin-top:12px;font-weight:500}
+.fox-subhead{display:grid;grid-template-columns:180px 1fr .8fr;gap:28px;align-items:end;margin:105px 0 26px}
+.fox-subhead h4{margin:0}.fox-subhead p{margin:0}
+.fox-media-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fox-media-grid figure{margin:0;min-width:0;border:1px solid rgba(255,255,255,.18)}
+.fox-media-grid .fox-artwork{height:clamp(300px,35vw,540px)}
+.fox-media-grid figcaption{font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:17px 20px;color:#bbb}
+.fox-digital{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.fox-digital>.fox-artwork{height:600px}
+.fox-digital-note{padding:clamp(25px,5vw,65px);border:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;justify-content:center}
+.fox-digital-note p{font-size:clamp(26px,3vw,45px);line-height:1.2;letter-spacing:-.04em}
+.fox-digital-note small{color:#aaa;line-height:1.7}
+@media(max-width:900px){.fox-head,.fox-feature,.fox-digital{grid-template-columns:1fr}.fox-head h3{font-size:clamp(65px,12vw,120px)}.fox-feature .fox-artwork{min-height:460px}.fox-subhead{grid-template-columns:1fr 2fr}.fox-subhead p{grid-column:2}.fox-digital>.fox-artwork{height:450px}}
+@media(max-width:580px){.fox-case{margin-top:90px}.fox-head h3{font-size:70px}.fox-head h3 em{font-size:23px}.fox-meta{gap:10px}.fox-feature .fox-artwork{min-height:300px}.fox-subhead{grid-template-columns:1fr;margin-top:75px}.fox-subhead p{grid-column:auto}.fox-media-grid{grid-template-columns:1fr}.fox-media-grid .fox-artwork{height:330px}.fox-digital>.fox-artwork{height:390px}}
