@@ -225,6 +225,27 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="about-section" id="about">
+        <div className="about-heading"><span>04 / THE PERSON BEHIND THE WORK</span><h2>Beyond<br/>the pixels<span>.</span></h2></div>
+        <div className="about-layout">
+          <figure className="about-main-photo"><img src="/images/about-portrait.webp" alt="Vadym in a relaxed candid portrait" loading="lazy"/><figcaption>VADYM / DESIGN · 3D · CODE</figcaption></figure>
+          <div className="about-story">
+            <span className="about-eyebrow">A LITTLE ABOUT ME</span>
+            <h3>Curious by nature.<br/>Creative by practice.</h3>
+            <p>I'm Vadym — a multidisciplinary designer working across graphic design, 3D visualization and front-end development. I like making complex things feel simple, useful and visually considered.</p>
+            <p>Beyond work, there's music, guitar, a fascination with how things are made, and the occasional moment of not taking myself too seriously.</p>
+            <div className="about-interests"><span>DESIGN</span><span>3D</span><span>FRONT-END</span><span>GUITAR</span></div>
+          </div>
+        </div>
+        <div className="about-gallery-head"><span>OFF THE CLOCK / A FEW FRAMES</span><span>SCROLL TO EXPLORE →</span></div>
+        <div className="about-gallery" aria-label="Personal photo gallery">
+          <figure><img src="/images/about-guitar.webp" alt="Playing electric guitar" loading="lazy"/><figcaption>01 / MUSIC</figcaption></figure>
+          <figure><img src="/images/about-candid.webp" alt="Relaxed candid moment" loading="lazy"/><figcaption>02 / EVERYDAY</figcaption></figure>
+          <figure><img src="/images/about-autumn.webp" alt="Autumn outdoor portrait" loading="lazy"/><figcaption>03 / OUTSIDE</figcaption></figure>
+          <figure><img src="/images/about-hoodie.webp" alt="Casual portrait with a playful mood" loading="lazy"/><figcaption>04 / JUST ME</figcaption></figure>
+        </div>
+      </section>
+
       <footer>
         <div><span>Available for remote work</span><h2>Have a project<br />or a role in mind?</h2></div>
         <a href="mailto:vaddimmura@gmail.com">vaddimmura@gmail.com <ArrowUpRight size={22} /></a>
