@@ -262,7 +262,7 @@ export default function Page() {
       <section className="about-section about-editorial" id="about">
         <div className="about-editorial-layout">
           <figure className="about-editorial-hero">
-            <img src={asset('images/about-redlight.webp')} alt="Vadym in warm cinematic lighting" loading="lazy" />
+            <img src={asset('images/about-sunglasses.webp')} alt="Vadym outdoors in sunglasses" loading="lazy" />
             <div className="about-editorial-signature"><strong>Vadym</strong><span>UI · GRAPHIC · 3D · WEB</span></div>
             <figcaption><span>☕ <small>GOOD COFFEE</small></span><span>♫ <small>GUITAR & MUSIC</small></span><span>✧ <small>GAMES SOMETIMES</small></span></figcaption>
           </figure>
@@ -280,7 +280,7 @@ export default function Page() {
             <div className="about-editorial-mosaic">
               <figure className="about-tile about-tile-tall"><img src={asset('images/about-guitar.webp')} alt="Vadym playing guitar" loading="lazy"/><figcaption><b>MUSIC</b><span>Always with me</span></figcaption></figure>
               <figure className="about-tile"><img src={asset('images/about-candid.webp')} alt="Candid moment" loading="lazy"/><figcaption><b>IDEAS</b><span>Everywhere</span></figcaption></figure>
-              <figure className="about-tile"><img src={asset('images/about-sunglasses.webp')} alt="Vadym outdoors in sunglasses" loading="lazy"/><figcaption><b>OUTSIDE</b><span>Taking a break</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-redlight.webp')} alt="Vadym in warm cinematic lighting" loading="lazy"/><figcaption><b>OUTSIDE</b><span>Taking a break</span></figcaption></figure>
               <figure className="about-tile"><img src={asset('images/about-event.webp')} alt="Vadym at an event" loading="lazy"/><figcaption><b>LIFE</b><span>Good moments</span></figcaption></figure>
               <figure className="about-tile"><img src={asset('images/about-playful.webp')} alt="Playful personal portrait" loading="lazy"/><figcaption><b>SOMETIMES</b><span>Just me</span></figcaption></figure>
             </div>
