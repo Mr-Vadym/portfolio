@@ -281,8 +281,8 @@ export default function Page() {
               <figure className="about-tile about-tile-tall"><img src={asset('images/about-guitar.webp')} alt="Vadym playing guitar" loading="lazy"/><figcaption><b>MUSIC</b><span>Always with me</span></figcaption></figure>
               <figure className="about-tile"><img src={asset('images/about-candid.webp')} alt="Candid moment" loading="lazy"/><figcaption><b>IDEAS</b><span>Everywhere</span></figcaption></figure>
               <figure className="about-tile"><img src={asset('images/about-redlight.webp')} alt="Vadym in warm cinematic lighting" loading="lazy"/><figcaption><b>OUTSIDE</b><span>Taking a break</span></figcaption></figure>
-              <figure className="about-tile"><img src={asset('images/about-event.webp')} alt="Vadym at an event" loading="lazy"/><figcaption><b>LIFE</b><span>Good moments</span></figcaption></figure>
-              <figure className="about-tile"><img src={asset('images/about-playful.webp')} alt="Playful personal portrait" loading="lazy"/><figcaption><b>SOMETIMES</b><span>Just me</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-life-new.webp')} alt="Vadym at an event" loading="lazy"/><figcaption><b>LIFE</b><span>Good moments</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-sometimes-new.webp')} alt="Playful personal portrait" loading="lazy"/><figcaption><b>SOMETIMES</b><span>Just me</span></figcaption></figure>
             </div>
             <div className="about-editorial-quote"><span>“</span><p>A mix of design, 3D, code and a lot of curiosity about the world around me.</p><small>SIMPLE THINGS<br/>MAKE A BIG DIFFERENCE.</small></div>
           </div>
