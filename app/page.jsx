@@ -218,7 +218,7 @@ export default function Page() {
         </div>
         <div className="motion-grid">
           {[
-            {src:'motion-magnetic-track.mp4',title:'Magnetic track system',kind:'Technical 3D animation',note:'Installation process and assembly visualization'},
+            {src:'motion-magnetic-track.mp4',title:'Solo curtain track',kind:'Technical 3D animation',note:'Solo curtain track installation and assembly visualization'},
             {src:'motion-balloon.mp4',title:'Brand in the sky',kind:'3D brand visual',note:'Atmospheric branded balloon animation'},
             {src:'motion-new-profile.mp4',title:'Profile reveal',kind:'Product visualization',note:'Materials, lighting and product presentation'},
             {src:'motion-thermal-rings.mp4',title:'Thermal rings',kind:'Motion design',note:'Animated product-led social creative'},
