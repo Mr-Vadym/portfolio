@@ -96,3 +96,18 @@
 .motion-card-info h3{font-size:clamp(25px,3vw,40px);letter-spacing:-.05em;margin:8px 0}.motion-card-info p{font-size:13px;color:#999;margin:0}
 .motion-card-info .motion-play-tag{white-space:nowrap}
 @media(max-width:700px){.motion-heading{grid-template-columns:1fr;gap:20px}.motion-grid{grid-template-columns:1fr}.motion-card-featured{grid-column:auto}.motion-card-featured .motion-video-wrap,.motion-video-wrap{aspect-ratio:4/3}.motion-section{padding-left:20px;padding-right:20px}.motion-card-info .motion-play-tag{display:none}}
+
+/* Motion gallery: native aspect ratios, no cropped frames.
+   Top row: two square renders + 4:5 balloon; bottom row: two vertical reels. */
+.motion-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:42px 18px;align-items:start}
+.motion-card,.motion-card-featured{grid-column:span 4}
+.motion-card-motion-profile-install,.motion-card-motion-thermal-rings{grid-column:span 6}
+.motion-video-wrap,.motion-card-featured .motion-video-wrap{aspect-ratio:1/1;background:#191a1d}
+.motion-card-motion-balloon .motion-video-wrap{aspect-ratio:4/5}
+.motion-card-motion-profile-install .motion-video-wrap,.motion-card-motion-thermal-rings .motion-video-wrap{aspect-ratio:9/16;max-height:690px}
+.motion-video-wrap video{object-fit:contain}
+.motion-card-info{align-items:flex-start}
+.motion-card-info h3{font-size:clamp(23px,2.4vw,34px)}
+@media(min-width:701px){.motion-card-motion-profile-install .motion-video-wrap,.motion-card-motion-thermal-rings .motion-video-wrap{aspect-ratio:4/5}.motion-card-motion-profile-install video,.motion-card-motion-thermal-rings video{object-fit:contain}}
+@media(max-width:900px) and (min-width:701px){.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.motion-card,.motion-card-featured,.motion-card-motion-profile-install,.motion-card-motion-thermal-rings{grid-column:auto}.motion-card-motion-balloon .motion-video-wrap{aspect-ratio:4/5}}
+@media(max-width:700px){.motion-grid{grid-template-columns:1fr;gap:32px}.motion-card,.motion-card-featured,.motion-card-motion-profile-install,.motion-card-motion-thermal-rings{grid-column:auto}.motion-video-wrap,.motion-card-featured .motion-video-wrap{aspect-ratio:1/1}.motion-card-motion-balloon .motion-video-wrap{aspect-ratio:4/5}.motion-card-motion-profile-install .motion-video-wrap,.motion-card-motion-thermal-rings .motion-video-wrap{aspect-ratio:9/16;max-height:650px}}
