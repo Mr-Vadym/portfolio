@@ -177,6 +177,30 @@ export default function Page() {
         </section>
       </section>
 
+      <section className="motion-section" id="motion">
+        <div className="motion-heading">
+          <div><span className="motion-eyebrow">03 / MOTION & 3D</span><h2>Made to<br/><em>move.</em></h2></div>
+          <p>Product visualization, technical 3D animation and motion-led brand communication. Selected commercial work showing objects, materials and mechanisms in motion.</p>
+        </div>
+        <div className="motion-grid">
+          {[
+            {src:'motion-magnetic-track.mp4',title:'Magnetic track system',kind:'Technical 3D animation',note:'Installation process and assembly visualization'},
+            {src:'motion-balloon.mp4',title:'Brand in the sky',kind:'3D brand visual',note:'Atmospheric branded balloon animation'},
+            {src:'motion-new-profile.mp4',title:'Profile reveal',kind:'Product visualization',note:'Materials, lighting and product presentation'},
+            {src:'motion-thermal-rings.mp4',title:'Thermal rings',kind:'Motion design',note:'Animated product-led social creative'},
+            {src:'motion-profile-install.mp4',title:'Profile installation',kind:'Technical visualization',note:'Step-by-step assembly animation'},
+          ].map((item,index)=>(
+            <article className={'motion-card '+(index===0?'motion-card-featured':'')} key={item.src}>
+              <div className="motion-video-wrap">
+                <video src={'/videos/'+item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+                <span className="motion-video-index">{String(index+1).padStart(2,'0')} / 05</span>
+              </div>
+              <div className="motion-card-info"><div><span>{item.kind}</span><h3>{item.title}</h3><p>{item.note}</p></div><span className="motion-play-tag">3D / MOTION</span></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="discipline code-side" id="code">
         <div className="section-number">02</div>
         <div className="discipline-head">
