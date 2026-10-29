@@ -259,28 +259,34 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="about-section" id="about">
-        <div className="about-heading"><span>04 / THE PERSON BEHIND THE WORK</span><h2>Beyond<br/>the pixels<span>.</span></h2></div>
-        <div className="about-layout">
-          <figure className="about-main-photo"><img src={asset('images/about-sunglasses.webp')} alt="Vadym in a relaxed candid portrait" loading="lazy"/><figcaption>VADYM / DESIGN · 3D · CODE</figcaption></figure>
-          <div className="about-story">
-            <span className="about-eyebrow">A LITTLE ABOUT ME</span>
-            <h3>Curious by nature.<br/>Creative by practice.</h3>
-            <p>I'm Vadym — a multidisciplinary designer working across graphic design, 3D visualization and front-end development. I like making complex things feel simple, useful and visually considered.</p>
-            <p>Beyond work, there's music, guitar, a fascination with how things are made, and the occasional moment of not taking myself too seriously.</p>
-            <div className="about-interests"><span>DESIGN</span><span>3D</span><span>FRONT-END</span><span>GUITAR</span></div>
+      <section className="about-section about-editorial" id="about">
+        <div className="about-editorial-layout">
+          <figure className="about-editorial-hero">
+            <img src={asset('images/about-redlight.webp')} alt="Vadym in warm cinematic lighting" loading="lazy" />
+            <div className="about-editorial-signature"><strong>Vadym</strong><span>UI · GRAPHIC · 3D · WEB</span></div>
+            <figcaption><span>☕ <small>GOOD COFFEE</small></span><span>♫ <small>GUITAR & MUSIC</small></span><span>✧ <small>GAMES SOMETIMES</small></span></figcaption>
+          </figure>
+          <div className="about-editorial-content">
+            <div className="about-editorial-intro">
+              <div><span className="about-editorial-kicker">ABOUT ME</span><h2>Beyond<br/>the pixels<span>.</span></h2></div>
+              <div className="about-editorial-bio"><p>I'm Vadym — a multidisciplinary designer working across graphic design, 3D and front-end development. I enjoy turning complex ideas into clear, functional visuals and building things that work as well as they look.</p><p>In my free time I play guitar, explore films and games, experiment with 3D and always try to learn something new.</p></div>
+            </div>
+            <div className="about-editorial-tools">
+              <span><img src={asset('images/tool-illustrator.webp')} alt=""/>Illustrator</span>
+              <span><img src={asset('images/tool-photoshop.webp')} alt=""/>Photoshop</span>
+              <span><img src={asset('images/tool-blender.webp')} alt=""/>Blender</span>
+              <span><Code2 size={24}/>Front-end</span>
+            </div>
+            <div className="about-editorial-mosaic">
+              <figure className="about-tile about-tile-tall"><img src={asset('images/about-guitar.webp')} alt="Vadym playing guitar" loading="lazy"/><figcaption><b>MUSIC</b><span>Always with me</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-candid.webp')} alt="Candid moment" loading="lazy"/><figcaption><b>IDEAS</b><span>Everywhere</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-sunglasses.webp')} alt="Vadym outdoors in sunglasses" loading="lazy"/><figcaption><b>OUTSIDE</b><span>Taking a break</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-event.webp')} alt="Vadym at an event" loading="lazy"/><figcaption><b>LIFE</b><span>Good moments</span></figcaption></figure>
+              <figure className="about-tile"><img src={asset('images/about-playful.webp')} alt="Playful personal portrait" loading="lazy"/><figcaption><b>SOMETIMES</b><span>Just me</span></figcaption></figure>
+            </div>
+            <div className="about-editorial-quote"><span>“</span><p>A mix of design, 3D, code and a lot of curiosity about the world around me.</p><small>SIMPLE THINGS<br/>MAKE A BIG DIFFERENCE.</small></div>
           </div>
         </div>
-        <div className="about-gallery-head"><span>OFF THE CLOCK / A FEW FRAMES</span><div className="about-carousel-controls"><span className="about-counter">{String(photoIndex+1).padStart(2,'0')} <i>/</i> {String(photoItems.length).padStart(2,'0')}</span><button type="button" onClick={() => goToPhoto(photoIndex-1)} disabled={photoIndex===0} aria-label="Previous photo">←</button><button type="button" onClick={() => goToPhoto(photoIndex+1)} disabled={photoIndex===photoItems.length-1} aria-label="Next photo">→</button></div></div>
-        <div className="about-gallery about-gallery-slider" ref={photoTrack} onScroll={syncPhotoIndex} aria-label="Personal photo carousel">
-          {photoItems.map(([file, alt, label], i) => (
-            <figure key={file} className={i===photoIndex?'is-active':''} onClick={() => goToPhoto(i)}>
-              <img src={asset('images/'+file)} alt={alt} loading="lazy"/>
-              <figcaption><span>{String(i+1).padStart(2,'0')}</span> {label}</figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="about-carousel-progress" aria-hidden="true"><span style={{width:((photoIndex+1)/photoItems.length*100)+'%'}} /></div>
       </section>
 
       <footer>
