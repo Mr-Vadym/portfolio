@@ -190,7 +190,7 @@ export default function Page() {
             {src:'motion-thermal-rings.mp4',title:'Thermal rings',kind:'Motion design',note:'Animated product-led social creative'},
             {src:'motion-profile-install.mp4',title:'Profile installation',kind:'Technical visualization',note:'Step-by-step assembly animation'},
           ].map((item,index)=>(
-            <article className={'motion-card '+(index===0?'motion-card-featured':'')} key={item.src}>
+            <article className={'motion-card motion-card-'+item.src.replace('.mp4','')} key={item.src}>
               <div className="motion-video-wrap">
                 <video src={'/'+item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
                 <span className="motion-video-index">{String(index+1).padStart(2,'0')} / 05</span>
