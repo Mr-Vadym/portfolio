@@ -78,3 +78,21 @@
 .fox-print-only .fox-artwork-identity{background:#29292b}
 .fox-print-only .fox-business-grid .fox-artwork{height:clamp(270px,31vw,470px)}
 .fox-print-note{margin:26px 0 0;color:#8e8f8b;font-size:12px;line-height:1.7}
+
+/* Motion and 3D reel */
+.motion-section{padding:clamp(90px,11vw,170px) max(24px,calc((100vw - 1400px)/2));background:#111214;color:#f6f5f1}
+.motion-heading{display:grid;grid-template-columns:1fr .55fr;gap:50px;align-items:end;margin-bottom:65px}
+.motion-eyebrow{color:#ff5c59;font-size:11px;font-weight:800;letter-spacing:.18em}
+.motion-heading h2{font-size:clamp(78px,12vw,180px);line-height:.82;letter-spacing:-.09em;margin:24px 0 0}.motion-heading h2 em{font-style:normal;color:#e95751}
+.motion-heading>p{color:#a7a7a5;line-height:1.8;font-size:16px;max-width:460px}
+.motion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 22px}
+.motion-card{min-width:0}.motion-card-featured{grid-column:span 2}
+.motion-video-wrap{position:relative;overflow:hidden;background:#202124;aspect-ratio:16/10}
+.motion-card-featured .motion-video-wrap{aspect-ratio:21/9}
+.motion-video-wrap video{display:block;width:100%;height:100%;object-fit:cover}
+.motion-video-index{position:absolute;left:20px;top:20px;padding:9px 12px;background:rgba(0,0,0,.5);backdrop-filter:blur(10px);font-size:11px;letter-spacing:.12em}
+.motion-card-info{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid #3b3b3b}
+.motion-card-info span{color:#999;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.motion-card-info h3{font-size:clamp(25px,3vw,40px);letter-spacing:-.05em;margin:8px 0}.motion-card-info p{font-size:13px;color:#999;margin:0}
+.motion-card-info .motion-play-tag{white-space:nowrap}
+@media(max-width:700px){.motion-heading{grid-template-columns:1fr;gap:20px}.motion-grid{grid-template-columns:1fr}.motion-card-featured{grid-column:auto}.motion-card-featured .motion-video-wrap,.motion-video-wrap{aspect-ratio:4/3}.motion-section{padding-left:20px;padding-right:20px}.motion-card-info .motion-play-tag{display:none}}
