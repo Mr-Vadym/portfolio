@@ -192,7 +192,7 @@ export default function Page() {
           ].map((item,index)=>(
             <article className={'motion-card '+(index===0?'motion-card-featured':'')} key={item.src}>
               <div className="motion-video-wrap">
-                <video src={'/videos/'+item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+                <video src={'/'+item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
                 <span className="motion-video-index">{String(index+1).padStart(2,'0')} / 05</span>
               </div>
               <div className="motion-card-info"><div><span>{item.kind}</span><h3>{item.title}</h3><p>{item.note}</p></div><span className="motion-play-tag">3D / MOTION</span></div>
