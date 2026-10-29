@@ -228,7 +228,7 @@ export default function Page() {
       <section className="about-section" id="about">
         <div className="about-heading"><span>04 / THE PERSON BEHIND THE WORK</span><h2>Beyond<br/>the pixels<span>.</span></h2></div>
         <div className="about-layout">
-          <figure className="about-main-photo"><img src="/images/about-portrait.webp" alt="Vadym in a relaxed candid portrait" loading="lazy"/><figcaption>VADYM / DESIGN · 3D · CODE</figcaption></figure>
+          <figure className="about-main-photo"><img src="/images/about-sunglasses.webp" alt="Vadym in a relaxed candid portrait" loading="lazy"/><figcaption>VADYM / DESIGN · 3D · CODE</figcaption></figure>
           <div className="about-story">
             <span className="about-eyebrow">A LITTLE ABOUT ME</span>
             <h3>Curious by nature.<br/>Creative by practice.</h3>
@@ -239,11 +239,14 @@ export default function Page() {
         </div>
         <div className="about-gallery-head"><span>OFF THE CLOCK / A FEW FRAMES</span><span>SCROLL TO EXPLORE →</span></div>
         <div className="about-gallery" aria-label="Personal photo gallery">
-          <figure><img src="/images/about-guitar.webp" alt="Playing electric guitar" loading="lazy"/><figcaption>01 / MUSIC</figcaption></figure>
-          <figure><img src="/images/about-candid.webp" alt="Relaxed candid moment" loading="lazy"/><figcaption>02 / EVERYDAY</figcaption></figure>
-          <figure><img src="/images/about-autumn.webp" alt="Autumn outdoor portrait" loading="lazy"/><figcaption>03 / OUTSIDE</figcaption></figure>
-          <figure><img src="/images/about-hoodie.webp" alt="Casual portrait with a playful mood" loading="lazy"/><figcaption>04 / JUST ME</figcaption></figure>
-        </div>
+          <figure><img src="/images/about-autumn.webp" alt="Autumn outdoor portrait" loading="lazy"/><figcaption>01 / OUTSIDE</figcaption></figure>
+          <figure><img src="/images/about-candid.webp" alt="Thoughtful candid portrait" loading="lazy"/><figcaption>02 / CANDID</figcaption></figure>
+          <figure><img src="/images/about-redlight.webp" alt="Warm red light portrait" loading="lazy"/><figcaption>03 / AFTER HOURS</figcaption></figure>
+          <figure><img src="/images/about-headshot.webp" alt="Close-up portrait" loading="lazy"/><figcaption>04 / PORTRAIT</figcaption></figure>
+          <figure><img src="/images/about-playful.webp" alt="Playful casual portrait" loading="lazy"/><figcaption>05 / JUST ME</figcaption></figure>
+          <figure><img src="/images/about-event.webp" alt="At a celebration with friends" loading="lazy"/><figcaption>06 / PEOPLE</figcaption></figure>
+          <figure><img src="/images/about-cap.webp" alt="Casual portrait in a cap" loading="lazy"/><figcaption>07 / EVERYDAY</figcaption></figure>
+        </div>>
       </section>
 
       <footer>
