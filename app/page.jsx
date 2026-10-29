@@ -156,22 +156,24 @@ export default function Page() {
 
         <div className="luma-summary"><div><span>ROLE</span><strong>Concept · Art Direction · Graphic Design</strong></div><div><span>TOOLS</span><strong>Adobe Photoshop · AI-assisted image production</strong></div><div><span>DELIVERABLES</span><strong>8 finished advertising creatives</strong></div></div>
 
-        <section className="fox-case fox-print-only" id="foxart">
+        <section className="fox-case fox-print-only" id="print">
           <header className="fox-head">
             <div><span className="fox-kicker">02 / SELECTED PRINT WORK</span><h3>Print<em>Brochures & business cards</em></h3></div>
-            <p>A concise selection of practical print design: structured product information, clear typography and tactile brand touchpoints. A focused look at layout and production rather than a full brand presentation.</p>
+            <p>Selected commercial print projects: concise layouts, purposeful typography and visual systems adapted to different businesses.</p>
           </header>
-          <div className="fox-meta"><span>PRINT DESIGN</span><span>EDITORIAL LAYOUT</span><span>PRODUCTION-READY ARTWORK</span></div>
-          <div className="fox-feature">
-            <div className="fox-feature-copy"><span>01 / BROCHURE DESIGN</span><h4>Information,<br/>made clear.</h4><p>A product brochure for FOXART's lighting solutions, balancing technical content with accessible visual presentation. Designed within an existing brand identity.</p></div>
-            <div className="fox-artwork fox-artwork-identity"><img src="/images/foxart-brochure.jpg" alt="FOXART lighting solutions product brochure" loading="lazy" /></div>
+          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span>SELECTED WORK</span></div>
+          <div className="fox-subhead"><span>01 / BROCHURES</span><h4>Complex information.<br/>Clear presentation.</h4><p>Product communication for FOXART, designed within an established brand identity. Brochure layouts and technical reference materials.</p></div>
+          <div className="fox-media-grid">
+            <figure><div className="fox-artwork"><img src="/images/foxart-brochure.jpg" alt="FOXART lighting solutions brochure" loading="lazy"/></div><figcaption>FOXART / Lighting solutions brochure</figcaption></figure>
+            <figure><div className="fox-artwork"><img src="/images/foxart-profile-cards.jpg" alt="FOXART technical profile reference cards" loading="lazy"/></div><figcaption>FOXART / Technical profile cards</figcaption></figure>
           </div>
-          <div className="fox-subhead"><span>02 / BUSINESS CARDS</span><h4>Small format.<br/>Strong first impression.</h4><p>Compact print layouts where type hierarchy, contrast and essential contact details do the work.</p></div>
-          <div className="fox-media-grid fox-business-grid">
-            <figure><div className="fox-artwork"><img src="/images/foxart-profile-cards.jpg" alt="Printed product reference cards and information layout" loading="lazy" /></div><figcaption>Reference cards / Print layout</figcaption></figure>
-            <figure><div className="fox-artwork"><img src="/images/foxart-identity.jpg" alt="Brand stationery and printed business materials" loading="lazy" /></div><figcaption>Stationery / Business print</figcaption></figure>
+          <div className="fox-subhead"><span>02 / BUSINESS CARDS</span><h4>Distinct businesses.<br/>Distinct identities.</h4><p>Three double-sided business card designs, each built around a different service, audience and visual character.</p></div>
+          <div className="fox-media-grid fox-card-gallery">
+            <figure><div className="fox-artwork"><img src="/images/print-taxi.jpg" alt="Black and yellow taxi service business card, front and back" loading="lazy"/></div><figcaption>Taxi / Transport services</figcaption></figure>
+            <figure><div className="fox-artwork"><img src="/images/print-internet.jpg" alt="Green and white internet provider business card, front and back" loading="lazy"/></div><figcaption>Internet / Connectivity services</figcaption></figure>
+            <figure><div className="fox-artwork"><img src="/images/print-services.jpg" alt="Black and red painting and pressure washing business card, front and back" loading="lazy"/></div><figcaption>Painting & cleaning / Home services</figcaption></figure>
           </div>
-          <p className="fox-print-note">Selected commercial print work · Existing FOXART identity was refreshed and adapted, not created from scratch.</p>
+          <p className="fox-print-note">Selected commercial design work. FOXART's existing brand identity was refreshed and adapted, not created from scratch.</p>
         </section>
       </section>
 
