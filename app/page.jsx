@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { ArrowDown, ArrowUpRight, Code2, Mail, Palette, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Code2, Instagram, Mail, Palette, Sparkles } from 'lucide-react';
 
 const paths = {
   design: {
@@ -100,13 +100,12 @@ export default function Page() {
         <header className="split-header">
           <a href="#home" className="wordmark">VL<span>.</span></a>
           <p>Vadym Loiko / Portfolio 2026 · Design + Code</p>
-          <a href="mailto:vaddimmura@gmail.com"><Mail size={17} /> Contact</a>
+          <div className="hero-header-links"><a href="https://www.instagram.com/vadimm.ko/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><Instagram size={18}/><span>Instagram</span></a><a href="mailto:vaddimmura@gmail.com"><Mail size={17} /> Contact</a></div>
         </header>
 
-        <div className="intro">
-          <p>Two disciplines. One visual mindset.</p>
-          <h1>Choose what<br />you want to see.</h1>
-          <span>Graphic / Creative Design <i>+</i> Front-end Markup</span>
+        <div className="intro intro-with-photo">
+          <div className="intro-title"><p>Two disciplines. One visual mindset.</p><h1>Choose what<br />you want to see<span className="intro-dot">.</span></h1><span>Graphic / Creative Design <i>+</i> Front-end Markup</span></div>
+          <figure className="intro-portrait"><img src="/images/hero-vadym.webp" alt="Vadym Loiko smiling in sunglasses" fetchPriority="high" /><figcaption><span>THE PERSON BEHIND THE PIXELS</span><strong>VADYM LOIKO / 2026</strong></figcaption></figure>
         </div>
 
         <div className="path-grid">
@@ -280,7 +279,7 @@ export default function Page() {
 
       <footer>
         <div><span>Available for remote work</span><h2>Have a project<br />or a role in mind?</h2></div>
-        <a href="mailto:vaddimmura@gmail.com">vaddimmura@gmail.com <ArrowUpRight size={22} /></a>
+        <div className="footer-links"><a href="mailto:vaddimmura@gmail.com">vaddimmura@gmail.com <ArrowUpRight size={22} /></a><a href="https://www.instagram.com/vadimm.ko/" target="_blank" rel="noopener noreferrer"><Instagram size={19}/> Instagram <ArrowUpRight size={17}/></a></div>
         <p>Vadym Loiko © 2026</p>
       </footer>
     </main>
