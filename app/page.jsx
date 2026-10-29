@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Code2, Mail, Palette, Sparkles } from 'lucide-react';
 
-const asset = (path) => `${import.meta.env.BASE_URL || '/'}${path.replace(/^\\/+/, '')}`;
+const asset = (path) => `${import.meta.env.BASE_URL || '/'}${path.startsWith('/') ? path.slice(1) : path}`;
 
 const paths = {
   design: {
