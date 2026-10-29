@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Code2, Mail, Palette, Sparkles } from 'lucide-react';
 
 const paths = {
@@ -58,6 +58,35 @@ const codeProjects = [
 
 export default function Page() {
   const [entered, setEntered] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const photoTrack = useRef(null);
+  const photoItems = [
+    ['about-autumn.webp','Autumn outdoor portrait','OUTSIDE'],
+    ['about-candid.webp','Thoughtful candid portrait','CANDID'],
+    ['about-redlight.webp','Warm red light portrait','AFTER HOURS'],
+    ['about-headshot.webp','Close-up portrait','PORTRAIT'],
+    ['about-playful.webp','Playful casual portrait','JUST ME'],
+    ['about-event.webp','At a celebration with friends','PEOPLE'],
+    ['about-cap.webp','Casual portrait in a cap','EVERYDAY'],
+  ];
+  const goToPhoto = (index) => {
+    const next = Math.max(0, Math.min(photoItems.length - 1, index));
+    const track = photoTrack.current;
+    const card = track?.children[next];
+    if (track && card) track.scrollTo({ left: card.offsetLeft - track.offsetLeft - (track.clientWidth - card.clientWidth) / 2, behavior: 'smooth' });
+    setPhotoIndex(next);
+  };
+  const syncPhotoIndex = () => {
+    const track = photoTrack.current;
+    if (!track) return;
+    const center = track.scrollLeft + track.clientWidth / 2;
+    let closest = 0, distance = Infinity;
+    Array.from(track.children).forEach((card, i) => {
+      const delta = Math.abs(card.offsetLeft - track.offsetLeft + card.clientWidth / 2 - center);
+      if (delta < distance) { distance = delta; closest = i; }
+    });
+    setPhotoIndex(closest);
+  };
 
   useEffect(() => setEntered(true), []);
 
@@ -237,16 +266,16 @@ export default function Page() {
             <div className="about-interests"><span>DESIGN</span><span>3D</span><span>FRONT-END</span><span>GUITAR</span></div>
           </div>
         </div>
-        <div className="about-gallery-head"><span>OFF THE CLOCK / A FEW FRAMES</span><span>SCROLL TO EXPLORE →</span></div>
-        <div className="about-gallery" aria-label="Personal photo gallery">
-          <figure><img src="/images/about-autumn.webp" alt="Autumn outdoor portrait" loading="lazy"/><figcaption>01 / OUTSIDE</figcaption></figure>
-          <figure><img src="/images/about-candid.webp" alt="Thoughtful candid portrait" loading="lazy"/><figcaption>02 / CANDID</figcaption></figure>
-          <figure><img src="/images/about-redlight.webp" alt="Warm red light portrait" loading="lazy"/><figcaption>03 / AFTER HOURS</figcaption></figure>
-          <figure><img src="/images/about-headshot.webp" alt="Close-up portrait" loading="lazy"/><figcaption>04 / PORTRAIT</figcaption></figure>
-          <figure><img src="/images/about-playful.webp" alt="Playful casual portrait" loading="lazy"/><figcaption>05 / JUST ME</figcaption></figure>
-          <figure><img src="/images/about-event.webp" alt="At a celebration with friends" loading="lazy"/><figcaption>06 / PEOPLE</figcaption></figure>
-          <figure><img src="/images/about-cap.webp" alt="Casual portrait in a cap" loading="lazy"/><figcaption>07 / EVERYDAY</figcaption></figure>
-        </div>>
+        <div className="about-gallery-head"><span>OFF THE CLOCK / A FEW FRAMES</span><div className="about-carousel-controls"><span className="about-counter">{String(photoIndex+1).padStart(2,'0')} <i>/</i> {String(photoItems.length).padStart(2,'0')}</span><button type="button" onClick={() => goToPhoto(photoIndex-1)} disabled={photoIndex===0} aria-label="Previous photo">←</button><button type="button" onClick={() => goToPhoto(photoIndex+1)} disabled={photoIndex===photoItems.length-1} aria-label="Next photo">→</button></div></div>
+        <div className="about-gallery about-gallery-slider" ref={photoTrack} onScroll={syncPhotoIndex} aria-label="Personal photo carousel">
+          {photoItems.map(([file, alt, label], i) => (
+            <figure key={file} className={i===photoIndex?'is-active':''} onClick={() => goToPhoto(i)}>
+              <img src={'/images/'+file} alt={alt} loading="lazy"/>
+              <figcaption><span>{String(i+1).padStart(2,'0')}</span> {label}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="about-carousel-progress" aria-hidden="true"><span style={{width:((photoIndex+1)/photoItems.length*100)+'%'}} /></div>
       </section>
 
       <footer>
