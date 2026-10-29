@@ -117,7 +117,7 @@ export default function Page() {
             <span className="luma-eyebrow">FEATURED CASE / 2026 / CONCEPT CAMPAIGN</span>
             <h3>LUMA<span>®</span><br />Barrier Cloud Cream</h3>
             <p>One skincare product. Eight coordinated advertising creatives. A self-initiated campaign exploring offer-led design, product storytelling, ingredients, lifestyle imagery and format adaptation.</p>
-            <div className="case-tags"><span>Art Direction</span><span className="tool-tag tool-ps"><b>Ps</b> Photoshop</span><span>AI-assisted Imagery</span><span>Digital Ads</span></div>
+            <div className="case-tags"><span>Art Direction</span><span className="tool-tag tool-ps"><img src="/images/tool-photoshop.webp" alt="" /> Photoshop</span><span>AI-assisted Imagery</span><span>Digital Ads</span></div>
             <a className="luma-jump" href="#luma-gallery">Explore the campaign <ArrowDown size={18} /></a>
           </div>
           <div className="luma-cover">
@@ -161,7 +161,7 @@ export default function Page() {
             <div><span className="fox-kicker">02 / SELECTED PRINT WORK</span><h3>Print<em>Brochures & business cards</em></h3></div>
             <p>Selected commercial print projects: concise layouts, purposeful typography and visual systems adapted to different businesses.</p>
           </header>
-          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span className="tool-tag tool-ai"><b>Ai</b> Illustrator</span><span className="tool-tag tool-ps"><b>Ps</b> Photoshop</span></div>
+          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span className="tool-tag tool-ai"><img src="/images/tool-illustrator.webp" alt="" /> Illustrator</span><span className="tool-tag tool-ps"><b>Ps</b> Photoshop</span></div>
           <div className="fox-subhead"><span>01 / BROCHURES</span><h4>Complex information.<br/>Clear presentation.</h4><p>Product communication for FOXART, designed within an established brand identity. Brochure layouts and technical reference materials.</p></div>
           <div className="fox-media-grid">
             <figure><div className="fox-artwork"><img src="/images/foxart-brochure.jpg" alt="FOXART lighting solutions brochure" loading="lazy"/></div><figcaption>FOXART / Lighting solutions brochure</figcaption></figure>
@@ -195,7 +195,7 @@ export default function Page() {
                 <video src={'/'+item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
                 <span className="motion-video-index">{String(index+1).padStart(2,'0')} / 05</span>
               </div>
-              <div className="motion-card-info"><div><span>{item.kind}</span><h3>{item.title}</h3><p>{item.note}</p></div><span className="motion-play-tag tool-tag tool-blender"><span className="blender-mark">●</span> Blender</span></div>
+              <div className="motion-card-info"><div><span>{item.kind}</span><h3>{item.title}</h3><p>{item.note}</p></div><span className="motion-play-tag tool-tag tool-blender"><img src="/images/tool-blender.webp" alt="" /> Blender</span></div>
             </article>
           ))}
         </div>
