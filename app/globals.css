@@ -70,3 +70,11 @@
 .fox-digital-note small{color:#aaa;line-height:1.7}
 @media(max-width:900px){.fox-head,.fox-feature,.fox-digital{grid-template-columns:1fr}.fox-head h3{font-size:clamp(65px,12vw,120px)}.fox-feature .fox-artwork{min-height:460px}.fox-subhead{grid-template-columns:1fr 2fr}.fox-subhead p{grid-column:2}.fox-digital>.fox-artwork{height:450px}}
 @media(max-width:580px){.fox-case{margin-top:90px}.fox-head h3{font-size:70px}.fox-head h3 em{font-size:23px}.fox-meta{gap:10px}.fox-feature .fox-artwork{min-height:300px}.fox-subhead{grid-template-columns:1fr;margin-top:75px}.fox-subhead p{grid-column:auto}.fox-media-grid{grid-template-columns:1fr}.fox-media-grid .fox-artwork{height:330px}.fox-digital>.fox-artwork{height:390px}}
+
+/* Compact print-only selection */
+.fox-print-only .fox-head h3{font-size:clamp(65px,9vw,130px)}
+.fox-print-only .fox-head h3 em{font-size:clamp(24px,3vw,42px)}
+.fox-print-only .fox-feature{min-height:480px}
+.fox-print-only .fox-artwork-identity{background:#29292b}
+.fox-print-only .fox-business-grid .fox-artwork{height:clamp(270px,31vw,470px)}
+.fox-print-note{margin:26px 0 0;color:#8e8f8b;font-size:12px;line-height:1.7}
