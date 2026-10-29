@@ -111,3 +111,12 @@
 @media(min-width:701px){.motion-card-motion-profile-install .motion-video-wrap,.motion-card-motion-thermal-rings .motion-video-wrap{aspect-ratio:4/5}.motion-card-motion-profile-install video,.motion-card-motion-thermal-rings video{object-fit:contain}}
 @media(max-width:900px) and (min-width:701px){.motion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.motion-card,.motion-card-featured,.motion-card-motion-profile-install,.motion-card-motion-thermal-rings{grid-column:auto}.motion-card-motion-balloon .motion-video-wrap{aspect-ratio:4/5}}
 @media(max-width:700px){.motion-grid{grid-template-columns:1fr;gap:32px}.motion-card,.motion-card-featured,.motion-card-motion-profile-install,.motion-card-motion-thermal-rings{grid-column:auto}.motion-video-wrap,.motion-card-featured .motion-video-wrap{aspect-ratio:1/1}.motion-card-motion-balloon .motion-video-wrap{aspect-ratio:4/5}.motion-card-motion-profile-install .motion-video-wrap,.motion-card-motion-thermal-rings .motion-video-wrap{aspect-ratio:9/16;max-height:650px}}
+
+/* Quiet software identifiers */
+.tool-tag{display:inline-flex!important;align-items:center;gap:7px;white-space:nowrap;font-size:11px!important;letter-spacing:.025em!important;text-transform:none!important}
+.tool-tag b{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:5px;font-size:11px;font-weight:800;letter-spacing:-.04em}
+.tool-ps b{background:#102f46;color:#58c5ff;border:1px solid #255f85}
+.tool-ai b{background:#3c240d;color:#ffad42;border:1px solid #8c4e15}
+.tool-blender .blender-mark{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#ea7a26;color:#fff;font-size:12px}
+.motion-card-info .tool-blender{color:#bcbcbc}
+@media(max-width:700px){.motion-card-info .motion-play-tag.tool-blender{display:inline-flex!important}}
