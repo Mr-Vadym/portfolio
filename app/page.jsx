@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Code2, Mail, Palette, Sparkles } from 'lucide-react';
 
+const asset = (path) => `${import.meta.env.BASE_URL || '/'}${path.replace(/^\\/+/, '')}`;
+
 const paths = {
   design: {
     kicker: '01 / DESIGN',
@@ -109,7 +111,7 @@ export default function Page() {
 
         <div className="intro intro-with-photo">
           <div className="intro-title"><p>Two disciplines. One visual mindset.</p><h1>Choose what<br />you want to see<span className="intro-dot">.</span></h1><span>Graphic / Creative Design <i>+</i> Front-end Markup</span></div>
-          <figure className="intro-portrait"><img src="/images/hero-vadym.webp" alt="Vadym Loiko smiling in sunglasses" fetchPriority="high" /><figcaption><span>THE PERSON BEHIND THE PIXELS</span><strong>VADYM LOIKO / 2026</strong></figcaption></figure>
+          <figure className="intro-portrait"><img src={asset('images/hero-vadym.webp')} alt="Vadym Loiko smiling in sunglasses" fetchPriority="high" /><figcaption><span>THE PERSON BEHIND THE PIXELS</span><strong>VADYM LOIKO / 2026</strong></figcaption></figure>
         </div>
 
         <div className="path-grid">
@@ -149,11 +151,11 @@ export default function Page() {
             <span className="luma-eyebrow">FEATURED CASE / 2026 / CONCEPT CAMPAIGN</span>
             <h3>LUMA<span>®</span><br />Barrier Cloud Cream</h3>
             <p>One skincare product. Eight coordinated advertising creatives. A self-initiated campaign exploring offer-led design, product storytelling, ingredients, lifestyle imagery and format adaptation.</p>
-            <div className="case-tags"><span>Art Direction</span><span className="tool-tag tool-ps"><img src="/images/tool-photoshop.webp" alt="" /> Photoshop</span><span>AI-assisted Imagery</span><span>Digital Ads</span></div>
+            <div className="case-tags"><span>Art Direction</span><span className="tool-tag tool-ps"><img src={asset('images/tool-photoshop.webp')} alt="" /> Photoshop</span><span>AI-assisted Imagery</span><span>Digital Ads</span></div>
             <a className="luma-jump" href="#luma-gallery">Explore the campaign <ArrowDown size={18} /></a>
           </div>
           <div className="luma-cover">
-            <img src="/images/luma-01-hero.jpg" alt="LUMA Barrier Cloud Cream campaign hero advertising creative" />
+            <img src={asset('images/luma-01-hero.jpg')} alt="LUMA Barrier Cloud Cream campaign hero advertising creative" />
             <div className="luma-cover-label">01 / CAMPAIGN KEY VISUAL</div>
           </div>
         </div>
@@ -163,26 +165,26 @@ export default function Page() {
 
           <div className="luma-section-heading"><span>01</span><div><h3>Product & offer</h3><p>Clear product hierarchy, a distinctive visual language and direct promotional messaging.</p></div></div>
           <div className="luma-grid luma-grid-three">
-            <figure><img src="/images/luma-02-product.jpg" alt="LUMA product-focused skincare advertising creative" loading="lazy" /><figcaption>01 / Product story</figcaption></figure>
-            <figure><img src="/images/luma-03-promo.jpg" alt="LUMA limited-time 20 percent off promotional creative" loading="lazy" /><figcaption>02 / Promotional offer</figcaption></figure>
-            <figure><img src="/images/luma-04-lifestyle.jpg" alt="LUMA lifestyle skincare advertising creative" loading="lazy" /><figcaption>03 / Lifestyle</figcaption></figure>
+            <figure><img src={asset('images/luma-02-product.jpg')} alt="LUMA product-focused skincare advertising creative" loading="lazy" /><figcaption>01 / Product story</figcaption></figure>
+            <figure><img src={asset('images/luma-03-promo.jpg')} alt="LUMA limited-time 20 percent off promotional creative" loading="lazy" /><figcaption>02 / Promotional offer</figcaption></figure>
+            <figure><img src={asset('images/luma-04-lifestyle.jpg')} alt="LUMA lifestyle skincare advertising creative" loading="lazy" /><figcaption>03 / Lifestyle</figcaption></figure>
           </div>
 
           <div className="luma-section-heading"><span>02</span><div><h3>Benefits & ingredients</h3><p>Turning product attributes into approachable, easy-to-scan visuals.</p></div></div>
           <div className="luma-grid luma-grid-two">
-            <figure><img src="/images/luma-05-benefits.jpg" alt="LUMA three product benefits creative" loading="lazy" /><figcaption>04 / Benefit-led creative</figcaption></figure>
-            <figure><img src="/images/luma-06-infographic.jpg" alt="LUMA ingredient infographic featuring ceramides and squalane" loading="lazy" /><figcaption>05 / Ingredient infographic</figcaption></figure>
+            <figure><img src={asset('images/luma-05-benefits.jpg')} alt="LUMA three product benefits creative" loading="lazy" /><figcaption>04 / Benefit-led creative</figcaption></figure>
+            <figure><img src={asset('images/luma-06-infographic.jpg')} alt="LUMA ingredient infographic featuring ceramides and squalane" loading="lazy" /><figcaption>05 / Ingredient infographic</figcaption></figure>
           </div>
 
           <div className="luma-section-heading"><span>03</span><div><h3>Review concept</h3><p>A testimonial-style composition demonstrating social-proof hierarchy. The review is illustrative, not a verified customer endorsement.</p></div></div>
           <div className="luma-grid luma-grid-review">
-            <figure><img src="/images/luma-07-review.jpg" alt="Illustrative LUMA customer-review-style advertising concept" loading="lazy" /><figcaption>06 / Illustrative testimonial</figcaption></figure>
+            <figure><img src={asset('images/luma-07-review.jpg')} alt="Illustrative LUMA customer-review-style advertising concept" loading="lazy" /><figcaption>06 / Illustrative testimonial</figcaption></figure>
             <div className="luma-editorial"><span>THE APPROACH</span><h4>One visual identity.<br />Different reasons to care.</h4><p>The campaign balances expressive typography, product-led imagery and concise benefit messaging. Each creative serves a different communication goal while retaining a recognizable brand system.</p><small>Personal portfolio concept · Not a commissioned brand campaign</small></div>
           </div>
 
           <div className="luma-section-heading"><span>04</span><div><h3>Format adaptation</h3><p>The same visual language rebuilt for a landscape placement rather than simply cropped.</p></div></div>
           <div className="luma-grid luma-grid-wide">
-            <figure><img src="/images/luma-08-landscape.jpg" alt="LUMA landscape advertising format adaptation" loading="lazy" /><figcaption>07 / Landscape adaptation</figcaption></figure>
+            <figure><img src={asset('images/luma-08-landscape.jpg')} alt="LUMA landscape advertising format adaptation" loading="lazy" /><figcaption>07 / Landscape adaptation</figcaption></figure>
           </div>
         </div>
 
@@ -193,17 +195,17 @@ export default function Page() {
             <div><span className="fox-kicker">02 / SELECTED PRINT WORK</span><h3>Print<em>Brochures & business cards</em></h3></div>
             <p>Selected commercial print projects: concise layouts, purposeful typography and visual systems adapted to different businesses.</p>
           </header>
-          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span className="tool-tag tool-ai"><img src="/images/tool-illustrator.webp" alt="" /> Illustrator</span><span className="tool-tag tool-ps"><img src="/images/tool-photoshop.webp" alt="" /> Photoshop</span></div>
+          <div className="fox-meta"><span>PRINT & EDITORIAL DESIGN</span><span>COMMERCIAL PROJECTS</span><span className="tool-tag tool-ai"><img src={asset('images/tool-illustrator.webp')} alt="" /> Illustrator</span><span className="tool-tag tool-ps"><img src={asset('images/tool-photoshop.webp')} alt="" /> Photoshop</span></div>
           <div className="fox-subhead"><span>01 / BROCHURES</span><h4>Complex information.<br/>Clear presentation.</h4><p>Product communication for FOXART, designed within an established brand identity. Brochure layouts and technical reference materials.</p></div>
           <div className="fox-media-grid">
-            <figure><div className="fox-artwork"><img src="/images/foxart-brochure.jpg" alt="FOXART lighting solutions brochure" loading="lazy"/></div><figcaption>FOXART / Lighting solutions brochure</figcaption></figure>
-            <figure><div className="fox-artwork"><img src="/images/foxart-profile-cards.jpg" alt="FOXART technical profile reference cards" loading="lazy"/></div><figcaption>FOXART / Technical profile cards</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/foxart-brochure.jpg')} alt="FOXART lighting solutions brochure" loading="lazy"/></div><figcaption>FOXART / Lighting solutions brochure</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/foxart-profile-cards.jpg')} alt="FOXART technical profile reference cards" loading="lazy"/></div><figcaption>FOXART / Technical profile cards</figcaption></figure>
           </div>
           <div className="fox-subhead"><span>02 / BUSINESS CARDS</span><h4>Distinct businesses.<br/>Distinct identities.</h4><p>Three double-sided business card designs, each built around a different service, audience and visual character.</p></div>
           <div className="fox-media-grid fox-card-gallery">
-            <figure><div className="fox-artwork"><img src="/images/print-taxi.jpg" alt="Black and yellow taxi service business card, front and back" loading="lazy"/></div><figcaption>Taxi / Transport services</figcaption></figure>
-            <figure><div className="fox-artwork"><img src="/images/print-internet.jpg" alt="Green and white internet provider business card, front and back" loading="lazy"/></div><figcaption>Internet / Connectivity services</figcaption></figure>
-            <figure><div className="fox-artwork"><img src="/images/print-services.jpg" alt="Black and red painting and pressure washing business card, front and back" loading="lazy"/></div><figcaption>Painting & cleaning / Home services</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/print-taxi.jpg')} alt="Black and yellow taxi service business card, front and back" loading="lazy"/></div><figcaption>Taxi / Transport services</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/print-internet.jpg')} alt="Green and white internet provider business card, front and back" loading="lazy"/></div><figcaption>Internet / Connectivity services</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/print-services.jpg')} alt="Black and red painting and pressure washing business card, front and back" loading="lazy"/></div><figcaption>Painting & cleaning / Home services</figcaption></figure>
           </div>
           <p className="fox-print-note">Selected commercial design work. FOXART's existing brand identity was refreshed and adapted, not created from scratch.</p>
         </section>
@@ -224,10 +226,10 @@ export default function Page() {
           ].map((item,index)=>(
             <article className={'motion-card motion-card-'+item.src.replace('.mp4','')} key={item.src}>
               <div className="motion-video-wrap">
-                <video src={'/'+item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+                <video src={asset(item.src)} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
                 <span className="motion-video-index">{String(index+1).padStart(2,'0')} / 05</span>
               </div>
-              <div className="motion-card-info"><div><span>{item.kind}</span><h3>{item.title}</h3><p>{item.note}</p></div><span className="motion-play-tag tool-tag tool-blender"><img src="/images/tool-blender.webp" alt="" /> Blender</span></div>
+              <div className="motion-card-info"><div><span>{item.kind}</span><h3>{item.title}</h3><p>{item.note}</p></div><span className="motion-play-tag tool-tag tool-blender"><img src={asset('images/tool-blender.webp')} alt="" /> Blender</span></div>
             </article>
           ))}
         </div>
@@ -246,7 +248,7 @@ export default function Page() {
         <div className="code-grid">
           {codeProjects.map(project => (
             <article className="code-card" key={project.title}>
-              <div className="browser-frame"><span></span><span></span><span></span><img src={project.image} alt={project.title} /></div>
+              <div className="browser-frame"><span></span><span></span><span></span><img src={asset(project.image)} alt={project.title} /></div>
               <div className="code-card-copy">
                 <span>{project.type}</span><h3>{project.title}</h3>
                 <div>{project.stack.map(tag => <small key={tag}>{tag}</small>)}</div>
@@ -260,7 +262,7 @@ export default function Page() {
       <section className="about-section" id="about">
         <div className="about-heading"><span>04 / THE PERSON BEHIND THE WORK</span><h2>Beyond<br/>the pixels<span>.</span></h2></div>
         <div className="about-layout">
-          <figure className="about-main-photo"><img src="/images/about-sunglasses.webp" alt="Vadym in a relaxed candid portrait" loading="lazy"/><figcaption>VADYM / DESIGN · 3D · CODE</figcaption></figure>
+          <figure className="about-main-photo"><img src={asset('images/about-sunglasses.webp')} alt="Vadym in a relaxed candid portrait" loading="lazy"/><figcaption>VADYM / DESIGN · 3D · CODE</figcaption></figure>
           <div className="about-story">
             <span className="about-eyebrow">A LITTLE ABOUT ME</span>
             <h3>Curious by nature.<br/>Creative by practice.</h3>
@@ -273,7 +275,7 @@ export default function Page() {
         <div className="about-gallery about-gallery-slider" ref={photoTrack} onScroll={syncPhotoIndex} aria-label="Personal photo carousel">
           {photoItems.map(([file, alt, label], i) => (
             <figure key={file} className={i===photoIndex?'is-active':''} onClick={() => goToPhoto(i)}>
-              <img src={'/images/'+file} alt={alt} loading="lazy"/>
+              <img src={asset('images/'+file)} alt={alt} loading="lazy"/>
               <figcaption><span>{String(i+1).padStart(2,'0')}</span> {label}</figcaption>
             </figure>
           ))}
