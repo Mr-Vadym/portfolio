@@ -199,11 +199,11 @@ export default function Page() {
           <div className="fox-subhead"><span>01 / BROCHURES</span><h4>Complex information.<br/>Clear presentation.</h4><p>Product communication for FOXART, designed within an established brand identity. Brochure layouts and technical reference materials.</p></div>
           <div className="fox-media-grid">
             <figure><div className="fox-artwork"><img src={asset('images/foxart-brochure.jpg')} alt="FOXART lighting solutions brochure" loading="lazy"/></div><figcaption>FOXART / Lighting solutions brochure</figcaption></figure>
-            <figure><div className="fox-artwork"><img src={asset('images/foxart-profile-cards.jpg')} alt="FOXART technical profile reference cards" loading="lazy"/></div><figcaption>FOXART / Technical profile cards</figcaption></figure>
           </div>
           <div className="fox-subhead" id="foxart-profile-brochure"><span>02 / FEATURED PRINT CASE</span><h4>FOXART profile systems.<br/>A technical brochure.</h4><p>A dedicated print case for construction profiles: a structured product overview with technical illustrations, consistent labeling and a recognizable black-and-yellow FOXART identity.</p></div>
           <div className="fox-media-grid fox-brochure-case">
-            <figure><div className="fox-artwork"><img src={asset('images/foxart-profile-brochure.png')} alt="FOXART construction profile brochure with technical diagrams and black-and-yellow cover" loading="lazy"/></div><figcaption>FOXART / Construction profile brochure · additional side</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/foxart-profile-cards.jpg')} alt="FOXART technical profile brochure, first view" loading="lazy"/></div><figcaption>FOXART / Technical brochure · first view</figcaption></figure>
+            <figure><div className="fox-artwork"><img src={asset('images/foxart-profile-brochure.png')} alt="FOXART construction profile brochure with technical diagrams and black-and-yellow cover" loading="lazy"/></div><figcaption>FOXART / Technical brochure · second view</figcaption></figure>
           </div>
           <div className="fox-subhead"><span>03 / BUSINESS CARDS</span><h4>Distinct businesses.<br/>Distinct identities.</h4><p>Three double-sided business card designs, each built around a different service, audience and visual character.</p></div>
           <div className="fox-media-grid fox-card-gallery">
