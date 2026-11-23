@@ -190,6 +190,20 @@ export default function Page() {
 
         <div className="luma-summary"><div><span>ROLE</span><strong>Concept · Art Direction · Graphic Design</strong></div><div><span>TOOLS</span><strong>Adobe Photoshop · AI-assisted image production</strong></div><div><span>DELIVERABLES</span><strong>8 finished advertising creatives</strong></div></div>
 
+        <section className="miliphone-case" id="miliphone">
+          <div className="miliphone-heading">
+            <span>PRODUCT ADVERTISING</span>
+            <h3>Miliphone<br />Black Friday creative.</h3>
+            <p>A landscape smartphone promotion built around a bold sale message, a prominent product image and a clear price hierarchy. Black and gold establish the visual mood, while the red headline and yellow call to action guide attention.</p>
+          </div>
+          <figure>
+            <a href={asset('images/miliphone-black-friday.jpg')} target="_blank" rel="noopener noreferrer" aria-label="View the full Miliphone Black Friday advertising creative">
+              <img src={asset('images/miliphone-black-friday.jpg')} alt="Miliphone Black Friday smartphone advertising banner with a black and gold composition, red sale headline and yellow Shop Now button" width="1138" height="640" loading="lazy" />
+            </a>
+            <figcaption>Miliphone / Black Friday / Landscape advertising creative</figcaption>
+          </figure>
+        </section>
+
         <section className="fox-case fox-print-only" id="print">
           <header className="fox-head">
             <div><span className="fox-kicker">02 / SELECTED PRINT WORK</span><h3>Print<em>Brochures & business cards</em></h3></div>

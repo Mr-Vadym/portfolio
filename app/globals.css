@@ -6,6 +6,18 @@
 @media(max-width:850px){.mock-hero{grid-template-columns:1fr}.mock-art-hero{min-height:520px}.mock-three{grid-template-columns:1fr 1fr}.mock-three .mock-art:last-child{grid-column:1/-1;aspect-ratio:16/9}.mock-two,.mock-feature-pair{grid-template-columns:1fr}.preview-label{display:block}.preview-label p{margin-top:10px}.mock-landscape{aspect-ratio:16/10}}
 @media(max-width:520px){.mock-three{grid-template-columns:1fr}.mock-three .mock-art:last-child{grid-column:auto;aspect-ratio:2/3}.mock-section-head{grid-template-columns:42px 1fr}.mock-art-hero{min-height:430px}.mock-art{padding:20px}}
 
+/* Miliphone product advertising case */
+.miliphone-case{margin-top:100px;scroll-margin-top:30px}
+.miliphone-heading{max-width:850px;margin-bottom:30px}
+.miliphone-heading>span{color:var(--acid);font-size:14px;letter-spacing:.12em}
+.miliphone-heading h3{font-size:clamp(38px,5vw,72px);line-height:1;letter-spacing:-.045em;margin:20px 0}
+.miliphone-heading p{color:#b7b7b2;font-size:16px;line-height:1.7;max-width:720px}
+.miliphone-case figure{margin:0;border:1px solid rgba(255,255,255,.2);background:#111}
+.miliphone-case figure a{display:block}
+.miliphone-case img{display:block;width:100%;height:auto}
+.miliphone-case figcaption{padding:18px 22px;font-size:14px;color:#c3c3bc}
+.miliphone-note{font-size:14px;line-height:1.6;color:#92938e;max-width:760px;margin-top:18px}
+@media(max-width:580px){.miliphone-case{margin-top:65px}.miliphone-case figcaption{padding:14px}}
 /* LUMA campaign case */
 .luma-intro{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid rgba(255,255,255,.22);min-height:650px}
 .luma-intro-copy{padding:clamp(28px,5vw,76px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
