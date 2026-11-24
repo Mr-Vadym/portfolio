@@ -49,6 +49,18 @@
 .luma-summary{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.2);margin-top:80px;padding-top:24px;gap:25px}
 .luma-summary>div{display:flex;flex-direction:column;gap:12px}
 .luma-summary strong{font-size:14px;font-weight:500;line-height:1.6}
+.armor-case{margin-top:110px;scroll-margin-top:30px}
+.armor-heading{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-bottom:32px}
+.armor-heading span{font-size:14px;letter-spacing:.1em;color:#ff718b;font-weight:700}
+.armor-heading h3{font-size:clamp(36px,4.5vw,66px);line-height:1.05;letter-spacing:-.04em;margin:18px 0 0}
+.armor-heading p{font-size:16px;line-height:1.7;color:#bbb;margin:0;max-width:540px}
+.armor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.armor-grid figure{margin:0;min-width:0;border:1px solid #ffffff25}
+.armor-grid a{display:block;background:#f4f4f6}
+.armor-grid a:focus-visible{outline:3px solid #ff718b;outline-offset:4px}
+.armor-grid img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.armor-grid figcaption{padding:16px 20px;font-size:14px;color:#ccc}
+@media(max-width:650px){.armor-case{margin-top:75px}.armor-heading{grid-template-columns:1fr;gap:20px}.armor-grid{grid-template-columns:1fr;gap:20px}}
 @media(max-width:850px){.luma-intro{grid-template-columns:1fr}.luma-cover{min-height:460px}.luma-cover img{height:430px}.luma-grid-three{grid-template-columns:repeat(2,minmax(0,1fr))}.luma-grid-three figure:last-child{grid-column:1/-1;max-width:calc(50% - 9px)}.luma-summary{grid-template-columns:1fr}}
 @media(max-width:580px){.luma-intro-copy{padding:28px}.luma-intro h3{font-size:43px}.luma-cover{min-height:360px;padding:20px}.luma-cover img{height:350px}.luma-gallery{margin-top:65px}.luma-gallery-heading{display:block}.luma-gallery-heading p{margin-top:12px}.luma-section-heading{grid-template-columns:34px 1fr;margin-top:55px}.luma-grid-three,.luma-grid-two,.luma-grid-review{grid-template-columns:1fr}.luma-grid-three figure:last-child{grid-column:auto;max-width:none}.luma-editorial{padding:30px}.luma-grid figure img{aspect-ratio:auto}.luma-summary{margin-top:60px}}
 

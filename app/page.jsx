@@ -190,6 +190,30 @@ export default function Page() {
 
         <div className="luma-summary"><div><span>ROLE</span><strong>Concept · Art Direction · Graphic Design</strong></div><div><span>TOOLS</span><strong>Adobe Photoshop · AI-assisted image production</strong></div><div><span>DELIVERABLES</span><strong>8 finished advertising creatives</strong></div></div>
 
+        <section className="armor-case" id="armorstandart">
+          <header className="armor-heading">
+            <div><span>E-COMMERCE / PRODUCT CONTENT</span><h3>ArmorStandart.<br />One product. Six views.</h3></div>
+            <p>A coordinated set of product listing visuals for a charger and cable kit: a clean product image, feature-led composition, technical infographic, material details, everyday use and package contents.</p>
+          </header>
+          <div className="armor-grid">
+            {[
+              ['01-product', 'Product hero', 'White ArmorStandart charger and USB-C to Lightning cable on a clean white background'],
+              ['02-features', 'Key features', 'ArmorStandart 25W PD charger product card with pink feature icons and cable close-up'],
+              ['03-specifications', 'Technical infographic', 'ArmorStandart charger specification infographic with power, port and plug information'],
+              ['04-details', 'Materials & details', 'Charger and cable detail compositions with material and finish callouts'],
+              ['05-lifestyle', 'Everyday use', 'ArmorStandart charger connected to a smartphone in a soft home setting'],
+              ['06-contents', 'Package contents', 'ArmorStandart charger kit with packaging, cable and instruction booklet'],
+            ].map(([file, title, alt]) => (
+              <figure key={file}>
+                <a href={asset(`images/armorstandart-${file}.webp`)} target="_blank" rel="noopener noreferrer" aria-label={`View ArmorStandart ${title.toLowerCase()} at full size`}>
+                  <img src={asset(`images/armorstandart-${file}.webp`)} alt={alt} width="2000" height="2000" loading="lazy" decoding="async" />
+                </a>
+                <figcaption>{title}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
         <section className="miliphone-case" id="miliphone">
           <div className="miliphone-heading">
             <span>PRODUCT ADVERTISING</span>
