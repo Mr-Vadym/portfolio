@@ -275,3 +275,39 @@
 .production-work .fox-head h3 em{color:#555}.production-work .fox-head p,.production-work .fox-subhead p{color:#555}
 
 .rollup-gallery .production-gallery{grid-template-columns:minmax(0,420px)}
+
+/* Consistent case spacing and paired portrait work. */
+.fox-print-only{margin-top:80px;padding-top:36px}
+.fox-print-only .fox-subhead{margin-top:64px;margin-bottom:24px}
+.production-work{padding-top:64px;padding-bottom:64px}
+.production-case{margin-top:64px}
+.production-case>.fox-subhead{margin:0 0 24px}
+.production-work>.fox-head{margin-bottom:40px}
+.production-work>.production-case:first-of-type{margin-top:0}
+.compact-case-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:64px;align-items:start}
+.compact-case-pair>.production-case{margin:0;min-width:0}
+.compact-case-pair .fox-subhead{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin:0 0 20px;min-height:170px}
+.compact-case-pair .fox-subhead h4{font-size:clamp(30px,3vw,44px);line-height:1.08;letter-spacing:-.045em;max-width:520px}
+.compact-case-pair .fox-subhead p{font-size:16px;line-height:1.6;max-width:520px}
+.compact-case-pair .production-gallery{display:block;max-width:none}
+.compact-case-pair .production-gallery a{height:560px;display:flex;justify-content:center;background:#e8e7e2;padding:16px}
+.compact-case-pair .production-gallery img{width:auto;max-width:100%;height:100%;object-fit:contain}
+.compact-case-pair figcaption{min-height:72px;background:#111}
+@media(max-width:760px){
+ .production-work{padding-top:44px;padding-bottom:44px}
+ .production-case,.compact-case-pair{margin-top:44px}
+ .production-case>.fox-subhead{margin-bottom:20px;gap:14px}
+ .fox-print-only .fox-subhead{margin-top:44px}
+ .compact-case-pair{gap:24px}
+ .compact-case-pair .fox-subhead{min-height:210px}
+ .compact-case-pair .fox-subhead h4{font-size:30px}
+ .compact-case-pair .production-gallery a{height:440px;padding:10px}
+}
+@media(max-width:580px){
+ .compact-case-pair{grid-template-columns:1fr;gap:36px}
+ .compact-case-pair .fox-subhead{min-height:0}
+ .compact-case-pair .production-gallery a{height:500px}
+ .compact-case-pair figcaption{min-height:0}
+ .fox-print-only{margin-top:60px;padding-top:28px}
+ .armor-case,.miliphone-case{margin-top:60px}
+}
