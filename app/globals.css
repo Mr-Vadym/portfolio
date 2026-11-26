@@ -271,3 +271,5 @@
 #large-format figure:last-child{grid-column:1/-1}
 #exhibition-stand .production-gallery{grid-template-columns:1fr}
 @media(max-width:760px){.production-work{width:calc(100% - 36px);padding:60px 0}.production-case{margin-top:55px}.production-gallery,.comparison-case .production-gallery,.portrait-gallery .production-gallery{grid-template-columns:1fr}.comparison-case figcaption{min-height:0}}
+
+.production-work .fox-head h3 em{color:#555}.production-work .fox-head p,.production-work .fox-subhead p{color:#555}
