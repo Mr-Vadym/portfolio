@@ -264,7 +264,7 @@
 .production-gallery a{display:block;background:#181818}
 .production-gallery img{display:block;width:100%;height:auto;object-fit:contain}
 .production-gallery figcaption{padding:16px 18px;font-size:14px;line-height:1.5;color:#ccc}
-.comparison-case .production-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+.comparison-case .production-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
 .comparison-case figcaption{min-height:74px}
 .social-gallery .production-gallery{max-width:590px}
 .portrait-gallery .production-gallery{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}
