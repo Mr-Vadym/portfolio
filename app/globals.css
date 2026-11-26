@@ -255,3 +255,19 @@
 .about-editorial-quote small{font-size:9px;color:#858991;letter-spacing:.09em;white-space:nowrap}
 @media(max-width:1100px){.about-editorial-layout{grid-template-columns:1fr}.about-editorial-hero{min-height:540px;max-height:700px}.about-editorial-hero>img{object-position:center 35%}.about-editorial-mosaic{min-height:440px}.about-editorial-intro h2{font-size:clamp(52px,8vw,86px)}}
 @media(max-width:650px){.about-editorial{padding:32px 16px}.about-editorial-hero{min-height:470px;border-radius:14px}.about-editorial-hero>figcaption>span{font-size:22px}.about-editorial-hero>figcaption small{font-size:9px}.about-editorial-intro{grid-template-columns:1fr;gap:16px}.about-editorial-intro h2{font-size:56px;margin-top:15px}.about-editorial-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.about-editorial-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,180px);min-height:0}.about-tile-tall{grid-row:span 2}.about-editorial-quote{gap:12px}.about-editorial-quote small{display:none}.about-editorial-quote>span{font-size:64px}}
+
+/* Additional commercial case studies */
+.production-work{padding:90px 0;max-width:1400px;margin:auto;width:calc(100% - 80px)}
+.production-case{margin-top:85px;scroll-margin-top:35px}
+.production-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.production-gallery figure{margin:0;min-width:0;border:1px solid #333;background:#111}
+.production-gallery a{display:block;background:#181818}
+.production-gallery img{display:block;width:100%;height:auto;object-fit:contain}
+.production-gallery figcaption{padding:16px 18px;font-size:14px;line-height:1.5;color:#ccc}
+.comparison-case .production-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+.comparison-case figcaption{min-height:74px}
+.social-gallery .production-gallery{max-width:590px}
+.portrait-gallery .production-gallery{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}
+#large-format figure:last-child{grid-column:1/-1}
+#exhibition-stand .production-gallery{grid-template-columns:1fr}
+@media(max-width:760px){.production-work{width:calc(100% - 36px);padding:60px 0}.production-case{margin-top:55px}.production-gallery,.comparison-case .production-gallery,.portrait-gallery .production-gallery{grid-template-columns:1fr}.comparison-case figcaption{min-height:0}}
